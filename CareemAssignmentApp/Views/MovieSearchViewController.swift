@@ -12,6 +12,8 @@ import RxCocoa
 
 class MovieSearchViewController: UIViewController, StoryboardInitializable {
 
+    private let disposeBag = DisposeBag()
+
     fileprivate let searchController = UISearchController(searchResultsController: nil)
 
     // MARK:- ViewConroller Lifecycle
@@ -34,13 +36,20 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 private extension MovieSearchViewController {
 
     func setupSearchBar() {
-        searchController.obscuresBackgroundDuringPresentation = false
         //searchController.searchBar.delegate = self
         searchController.searchBar.barStyle = .default
         searchController.searchBar.tintColor = UIColor.darkGray
         definesPresentationContext = true
         searchController.searchBar.placeholder = "Enter movie name"
-        navigationItem.searchController = searchController
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+        } else {
+            // Fallback on earlier versions
+        }
+        searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
+            // Perform Search
+            print("Search Bar search button pressed-----")
+        }).disposed(by: disposeBag)
     }
 
 }

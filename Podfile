@@ -10,6 +10,7 @@ target 'CareemAssignmentApp' do
   pod 'Alamofire', '~> 4.5.0'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'ObjectMapper', '~> 3.3'
 
   target 'CareemAssignmentAppTests' do
     inherit! :search_paths
