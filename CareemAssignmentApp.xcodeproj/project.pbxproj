@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22F268497B567B8452533146 /* Pods_CareemAssignmentAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E3A029899CC751A43F445C /* Pods_CareemAssignmentAppUITests.framework */; };
 		AF0DD8BB210A41CF00C6E092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */; };
 		AF0DD8BD210A41CF00C6E092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8BC210A41CF00C6E092 /* ViewController.swift */; };
 		AF0DD8C0210A41CF00C6E092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8BE210A41CF00C6E092 /* Main.storyboard */; };
@@ -15,6 +16,11 @@
 		AF0DD8C8210A41D200C6E092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */; };
 		AF0DD8D3210A41D200C6E092 /* CareemAssignmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8D2210A41D200C6E092 /* CareemAssignmentAppTests.swift */; };
 		AF0DD8DE210A41D200C6E092 /* CareemAssignmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8DD210A41D200C6E092 /* CareemAssignmentAppUITests.swift */; };
+		AF0DD8ED210A4C0000C6E092 /* MovieSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8EC210A4C0000C6E092 /* MovieSearch.storyboard */; };
+		AF0DD8F0210A4C5A00C6E092 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8EF210A4C5A00C6E092 /* UIViewController+Extensions.swift */; };
+		AF0DD8F2210A4CC900C6E092 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8F1210A4CC900C6E092 /* MovieSearchViewController.swift */; };
+		C046F29D78E74120C34073AC /* Pods_CareemAssignmentAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */; };
+		D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareemAssignmentAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B20FF1DDB75FC54A086242 /* Pods-CareemAssignmentAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		57E3A029899CC751A43F445C /* Pods_CareemAssignmentAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareemAssignmentAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareemAssignmentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		800E17ACD25D6B2E7D28D9FB /* Pods-CareemAssignmentAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppUITests/Pods-CareemAssignmentAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		82E92136BCB81B6BC1518E9F /* Pods-CareemAssignmentAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppUITests/Pods-CareemAssignmentAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AF0DD8B7210A41CF00C6E092 /* CareemAssignmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareemAssignmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF0DD8BC210A41CF00C6E092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 		AF0DD8D9210A41D200C6E092 /* CareemAssignmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0DD8DD210A41D200C6E092 /* CareemAssignmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentAppUITests.swift; sourceTree = "<group>"; };
 		AF0DD8DF210A41D200C6E092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0DD8EC210A4C0000C6E092 /* MovieSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieSearch.storyboard; sourceTree = "<group>"; };
+		AF0DD8EF210A4C5A00C6E092 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		AF0DD8F1210A4CC900C6E092 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
+		B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.release.xcconfig"; sourceTree = "<group>"; };
+		E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C046F29D78E74120C34073AC /* Pods_CareemAssignmentAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F268497B567B8452533146 /* Pods_CareemAssignmentAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85A95A773431D0BAB924D37B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */,
+				46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */,
+				57E3A029899CC751A43F445C /* Pods_CareemAssignmentAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C6F88AD5E1A5AE07C28EF74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */,
+				D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */,
+				E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */,
+				47B20FF1DDB75FC54A086242 /* Pods-CareemAssignmentAppTests.release.xcconfig */,
+				800E17ACD25D6B2E7D28D9FB /* Pods-CareemAssignmentAppUITests.debug.xcconfig */,
+				82E92136BCB81B6BC1518E9F /* Pods-CareemAssignmentAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF0DD8AE210A41CF00C6E092 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +127,8 @@
 				AF0DD8D1210A41D200C6E092 /* CareemAssignmentAppTests */,
 				AF0DD8DC210A41D200C6E092 /* CareemAssignmentAppUITests */,
 				AF0DD8B8210A41CF00C6E092 /* Products */,
+				8C6F88AD5E1A5AE07C28EF74 /* Pods */,
+				85A95A773431D0BAB924D37B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +145,8 @@
 		AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				AF0DD8EE210A4C3C00C6E092 /* Extensions */,
+				AF0DD8EB210A4BE600C6E092 /* Views */,
 				AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */,
 				AF0DD8BC210A41CF00C6E092 /* ViewController.swift */,
 				AF0DD8BE210A41CF00C6E092 /* Main.storyboard */,
@@ -128,6 +176,23 @@
 			path = CareemAssignmentAppUITests;
 			sourceTree = "<group>";
 		};
+		AF0DD8EB210A4BE600C6E092 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8EC210A4C0000C6E092 /* MovieSearch.storyboard */,
+				AF0DD8F1210A4CC900C6E092 /* MovieSearchViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF0DD8EE210A4C3C00C6E092 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8EF210A4C5A00C6E092 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF0DD8E2210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentApp" */;
 			buildPhases = (
+				8BDEC72C287071B5A0352A7C /* [CP] Check Pods Manifest.lock */,
 				AF0DD8B3210A41CF00C6E092 /* Sources */,
 				AF0DD8B4210A41CF00C6E092 /* Frameworks */,
 				AF0DD8B5210A41CF00C6E092 /* Resources */,
+				5E0923FF3F6133B85F8D2B4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF0DD8E5210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppTests" */;
 			buildPhases = (
+				EA60AEBA04C246E04F96C9D4 /* [CP] Check Pods Manifest.lock */,
 				AF0DD8CA210A41D200C6E092 /* Sources */,
 				AF0DD8CB210A41D200C6E092 /* Frameworks */,
 				AF0DD8CC210A41D200C6E092 /* Resources */,
@@ -170,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF0DD8E8210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppUITests" */;
 			buildPhases = (
+				29E6A8EA745BAC2D41C72AF2 /* [CP] Check Pods Manifest.lock */,
 				AF0DD8D5210A41D200C6E092 /* Sources */,
 				AF0DD8D6210A41D200C6E092 /* Frameworks */,
 				AF0DD8D7210A41D200C6E092 /* Resources */,
@@ -235,6 +304,7 @@
 				AF0DD8C8210A41D200C6E092 /* LaunchScreen.storyboard in Resources */,
 				AF0DD8C5210A41D200C6E092 /* Assets.xcassets in Resources */,
 				AF0DD8C0210A41CF00C6E092 /* Main.storyboard in Resources */,
+				AF0DD8ED210A4C0000C6E092 /* MovieSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +324,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29E6A8EA745BAC2D41C72AF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareemAssignmentAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0923FF3F6133B85F8D2B4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BDEC72C287071B5A0352A7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareemAssignmentApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA60AEBA04C246E04F96C9D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareemAssignmentAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF0DD8B3210A41CF00C6E092 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0DD8F0210A4C5A00C6E092 /* UIViewController+Extensions.swift in Sources */,
 				AF0DD8BD210A41CF00C6E092 /* ViewController.swift in Sources */,
 				AF0DD8C3210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld in Sources */,
+				AF0DD8F2210A4CC900C6E092 /* MovieSearchViewController.swift in Sources */,
 				AF0DD8BB210A41CF00C6E092 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,11 +583,13 @@
 		};
 		AF0DD8E3210A41D200C6E092 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH2642V3WY;
+				DEVELOPMENT_TEAM = XU9DUEQ8G7;
 				INFOPLIST_FILE = CareemAssignmentApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,11 +603,13 @@
 		};
 		AF0DD8E4210A41D200C6E092 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH2642V3WY;
+				DEVELOPMENT_TEAM = XU9DUEQ8G7;
 				INFOPLIST_FILE = CareemAssignmentApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +623,7 @@
 		};
 		AF0DD8E6210A41D200C6E092 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +645,7 @@
 		};
 		AF0DD8E7210A41D200C6E092 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B20FF1DDB75FC54A086242 /* Pods-CareemAssignmentAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +667,7 @@
 		};
 		AF0DD8E9210A41D200C6E092 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800E17ACD25D6B2E7D28D9FB /* Pods-CareemAssignmentAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +688,7 @@
 		};
 		AF0DD8EA210A41D200C6E092 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E92136BCB81B6BC1518E9F /* Pods-CareemAssignmentAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

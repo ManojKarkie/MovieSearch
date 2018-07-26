@@ -1,0 +1,6 @@
+framework module Pods_CareemAssignmentApp {
+  umbrella header "Pods-CareemAssignmentApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
