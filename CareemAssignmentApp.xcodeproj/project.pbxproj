@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF0DD8BB210A41CF00C6E092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */; };
+		AF0DD8BD210A41CF00C6E092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8BC210A41CF00C6E092 /* ViewController.swift */; };
+		AF0DD8C0210A41CF00C6E092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8BE210A41CF00C6E092 /* Main.storyboard */; };
+		AF0DD8C3210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8C1210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld */; };
+		AF0DD8C5210A41D200C6E092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8C4210A41D200C6E092 /* Assets.xcassets */; };
+		AF0DD8C8210A41D200C6E092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */; };
+		AF0DD8D3210A41D200C6E092 /* CareemAssignmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8D2210A41D200C6E092 /* CareemAssignmentAppTests.swift */; };
+		AF0DD8DE210A41D200C6E092 /* CareemAssignmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8DD210A41D200C6E092 /* CareemAssignmentAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF0DD8CF210A41D200C6E092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF0DD8AF210A41CF00C6E092 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0DD8B6210A41CF00C6E092;
+			remoteInfo = CareemAssignmentApp;
+		};
+		AF0DD8DA210A41D200C6E092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF0DD8AF210A41CF00C6E092 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0DD8B6210A41CF00C6E092;
+			remoteInfo = CareemAssignmentApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF0DD8B7210A41CF00C6E092 /* CareemAssignmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareemAssignmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF0DD8BC210A41CF00C6E092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF0DD8BF210A41CF00C6E092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF0DD8C2210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareemAssignmentApp.xcdatamodel; sourceTree = "<group>"; };
+		AF0DD8C4210A41D200C6E092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF0DD8C7210A41D200C6E092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF0DD8C9210A41D200C6E092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0DD8CE210A41D200C6E092 /* CareemAssignmentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0DD8D2210A41D200C6E092 /* CareemAssignmentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentAppTests.swift; sourceTree = "<group>"; };
+		AF0DD8D4210A41D200C6E092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0DD8D9210A41D200C6E092 /* CareemAssignmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0DD8DD210A41D200C6E092 /* CareemAssignmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentAppUITests.swift; sourceTree = "<group>"; };
+		AF0DD8DF210A41D200C6E092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF0DD8B4210A41CF00C6E092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0DD8CB210A41D200C6E092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0DD8D6210A41D200C6E092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF0DD8AE210A41CF00C6E092 = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */,
+				AF0DD8D1210A41D200C6E092 /* CareemAssignmentAppTests */,
+				AF0DD8DC210A41D200C6E092 /* CareemAssignmentAppUITests */,
+				AF0DD8B8210A41CF00C6E092 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF0DD8B8210A41CF00C6E092 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8B7210A41CF00C6E092 /* CareemAssignmentApp.app */,
+				AF0DD8CE210A41D200C6E092 /* CareemAssignmentAppTests.xctest */,
+				AF0DD8D9210A41D200C6E092 /* CareemAssignmentAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */,
+				AF0DD8BC210A41CF00C6E092 /* ViewController.swift */,
+				AF0DD8BE210A41CF00C6E092 /* Main.storyboard */,
+				AF0DD8C4210A41D200C6E092 /* Assets.xcassets */,
+				AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */,
+				AF0DD8C9210A41D200C6E092 /* Info.plist */,
+				AF0DD8C1210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld */,
+			);
+			path = CareemAssignmentApp;
+			sourceTree = "<group>";
+		};
+		AF0DD8D1210A41D200C6E092 /* CareemAssignmentAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8D2210A41D200C6E092 /* CareemAssignmentAppTests.swift */,
+				AF0DD8D4210A41D200C6E092 /* Info.plist */,
+			);
+			path = CareemAssignmentAppTests;
+			sourceTree = "<group>";
+		};
+		AF0DD8DC210A41D200C6E092 /* CareemAssignmentAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8DD210A41D200C6E092 /* CareemAssignmentAppUITests.swift */,
+				AF0DD8DF210A41D200C6E092 /* Info.plist */,
+			);
+			path = CareemAssignmentAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF0DD8E2210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentApp" */;
+			buildPhases = (
+				AF0DD8B3210A41CF00C6E092 /* Sources */,
+				AF0DD8B4210A41CF00C6E092 /* Frameworks */,
+				AF0DD8B5210A41CF00C6E092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CareemAssignmentApp;
+			productName = CareemAssignmentApp;
+			productReference = AF0DD8B7210A41CF00C6E092 /* CareemAssignmentApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF0DD8CD210A41D200C6E092 /* CareemAssignmentAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF0DD8E5210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppTests" */;
+			buildPhases = (
+				AF0DD8CA210A41D200C6E092 /* Sources */,
+				AF0DD8CB210A41D200C6E092 /* Frameworks */,
+				AF0DD8CC210A41D200C6E092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF0DD8D0210A41D200C6E092 /* PBXTargetDependency */,
+			);
+			name = CareemAssignmentAppTests;
+			productName = CareemAssignmentAppTests;
+			productReference = AF0DD8CE210A41D200C6E092 /* CareemAssignmentAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF0DD8D8210A41D200C6E092 /* CareemAssignmentAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF0DD8E8210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppUITests" */;
+			buildPhases = (
+				AF0DD8D5210A41D200C6E092 /* Sources */,
+				AF0DD8D6210A41D200C6E092 /* Frameworks */,
+				AF0DD8D7210A41D200C6E092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF0DD8DB210A41D200C6E092 /* PBXTargetDependency */,
+			);
+			name = CareemAssignmentAppUITests;
+			productName = CareemAssignmentAppUITests;
+			productReference = AF0DD8D9210A41D200C6E092 /* CareemAssignmentAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF0DD8AF210A41CF00C6E092 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Swiftech;
+				TargetAttributes = {
+					AF0DD8B6210A41CF00C6E092 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					AF0DD8CD210A41D200C6E092 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = AF0DD8B6210A41CF00C6E092;
+					};
+					AF0DD8D8210A41D200C6E092 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = AF0DD8B6210A41CF00C6E092;
+					};
+				};
+			};
+			buildConfigurationList = AF0DD8B2210A41CF00C6E092 /* Build configuration list for PBXProject "CareemAssignmentApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF0DD8AE210A41CF00C6E092;
+			productRefGroup = AF0DD8B8210A41CF00C6E092 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */,
+				AF0DD8CD210A41D200C6E092 /* CareemAssignmentAppTests */,
+				AF0DD8D8210A41D200C6E092 /* CareemAssignmentAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF0DD8B5210A41CF00C6E092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0DD8C8210A41D200C6E092 /* LaunchScreen.storyboard in Resources */,
+				AF0DD8C5210A41D200C6E092 /* Assets.xcassets in Resources */,
+				AF0DD8C0210A41CF00C6E092 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0DD8CC210A41D200C6E092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0DD8D7210A41D200C6E092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF0DD8B3210A41CF00C6E092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0DD8BD210A41CF00C6E092 /* ViewController.swift in Sources */,
+				AF0DD8C3210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld in Sources */,
+				AF0DD8BB210A41CF00C6E092 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0DD8CA210A41D200C6E092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0DD8D3210A41D200C6E092 /* CareemAssignmentAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0DD8D5210A41D200C6E092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0DD8DE210A41D200C6E092 /* CareemAssignmentAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF0DD8D0210A41D200C6E092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */;
+			targetProxy = AF0DD8CF210A41D200C6E092 /* PBXContainerItemProxy */;
+		};
+		AF0DD8DB210A41D200C6E092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */;
+			targetProxy = AF0DD8DA210A41D200C6E092 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF0DD8BE210A41CF00C6E092 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF0DD8BF210A41CF00C6E092 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF0DD8C7210A41D200C6E092 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF0DD8E0210A41D200C6E092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF0DD8E1210A41D200C6E092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF0DD8E3210A41D200C6E092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF0DD8E4210A41D200C6E092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF0DD8E6210A41D200C6E092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareemAssignmentApp.app/CareemAssignmentApp";
+			};
+			name = Debug;
+		};
+		AF0DD8E7210A41D200C6E092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareemAssignmentApp.app/CareemAssignmentApp";
+			};
+			name = Release;
+		};
+		AF0DD8E9210A41D200C6E092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CareemAssignmentApp;
+			};
+			name = Debug;
+		};
+		AF0DD8EA210A41D200C6E092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CareemAssignmentApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF0DD8B2210A41CF00C6E092 /* Build configuration list for PBXProject "CareemAssignmentApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0DD8E0210A41D200C6E092 /* Debug */,
+				AF0DD8E1210A41D200C6E092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF0DD8E2210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0DD8E3210A41D200C6E092 /* Debug */,
+				AF0DD8E4210A41D200C6E092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF0DD8E5210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0DD8E6210A41D200C6E092 /* Debug */,
+				AF0DD8E7210A41D200C6E092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF0DD8E8210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0DD8E9210A41D200C6E092 /* Debug */,
+				AF0DD8EA210A41D200C6E092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF0DD8C1210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF0DD8C2210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodel */,
+			);
+			currentVersion = AF0DD8C2210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodel */;
+			path = CareemAssignmentApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AF0DD8AF210A41CF00C6E092 /* Project object */;
+}
