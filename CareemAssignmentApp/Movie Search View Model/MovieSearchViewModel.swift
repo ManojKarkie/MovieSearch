@@ -18,6 +18,10 @@ class MovieSearchViewModel {
 
     // Observables/Drivers
 
+    var isLoadingDriver : Driver<Bool> {
+        return isLoading.asDriver()
+    }
+
     var successDriver: Driver<Bool> {
         return success.asDriver()
     }
@@ -62,6 +66,11 @@ class MovieSearchViewModel {
         }
     }
 
+    func refresh() {
+        movies = []
+        pageNumber = 1
+    }
+
 }
 
 // MARK:- TableView Helpers and Pagination Management
@@ -84,6 +93,10 @@ extension MovieSearchViewModel {
             return
         }
         pageNumber = 1
+    }
+
+    var isFirstPage: Bool {
+        return pageNumber == 1
     }
 
     func isLastRow(row: Int) -> Bool {

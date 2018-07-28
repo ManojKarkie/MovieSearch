@@ -35,12 +35,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RhZ-MI-PFJ">
-                                                    <rect key="frame" x="20" y="10" width="70" height="106.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RhZ-MI-PFJ">
+                                                    <rect key="frame" x="20" y="9.5" width="70" height="106.5"/>
                                                     <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="6d4-Sq-zc2"/>
                                                         <constraint firstAttribute="width" secondItem="RhZ-MI-PFJ" secondAttribute="height" multiplier="0.66: 1" id="KZo-Ev-4c5"/>
+                                                        <constraint firstAttribute="width" constant="70" id="vFX-b9-uZk"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="adsdsd" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-L4-ul9">
@@ -55,17 +55,17 @@
                                                     <color key="textColor" red="0.56204288560000004" green="0.56204288560000004" blue="0.56204288560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdsdsdsd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9L-QJ-cXe">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="sdsdsdsd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9L-QJ-cXe">
                                                     <rect key="frame" x="105" y="53.5" width="250" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <color key="textColor" red="0.59209048750000004" green="0.59219515320000005" blue="0.59208387139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-cQ-iuT">
-                                                    <rect key="frame" x="0.0" y="98.5" width="375" height="1"/>
+                                                    <rect key="frame" x="0.0" y="99" width="375" height="1"/>
                                                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="0.5" id="oXP-8x-g1a"/>
+                                                        <constraint firstAttribute="height" constant="1" id="oXP-8x-g1a"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -82,6 +82,7 @@
                                                 <constraint firstItem="vRc-b8-Gtf" firstAttribute="trailing" secondItem="MbB-L4-ul9" secondAttribute="trailing" id="XYO-C5-kb9"/>
                                                 <constraint firstAttribute="trailing" secondItem="rNJ-cQ-iuT" secondAttribute="trailing" id="cMu-g8-KDO"/>
                                                 <constraint firstItem="d9L-QJ-cXe" firstAttribute="leading" secondItem="vRc-b8-Gtf" secondAttribute="leading" id="emu-i4-C9Y"/>
+                                                <constraint firstItem="rNJ-cQ-iuT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RhZ-MI-PFJ" secondAttribute="bottom" priority="900" constant="10" id="fMZ-Bb-vcz"/>
                                                 <constraint firstAttribute="trailing" secondItem="MbB-L4-ul9" secondAttribute="trailing" constant="20" id="gA7-US-XGi"/>
                                                 <constraint firstItem="rNJ-cQ-iuT" firstAttribute="top" secondItem="d9L-QJ-cXe" secondAttribute="bottom" constant="28" id="l5o-dd-t7O"/>
                                                 <constraint firstItem="MbB-L4-ul9" firstAttribute="top" secondItem="DDn-xq-dHj" secondAttribute="top" constant="10" id="oCE-4a-OWP"/>
@@ -122,4 +123,7 @@
             <point key="canvasLocation" x="93.599999999999994" y="168.6656671664168"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="movie_placeholder" width="198" height="300"/>
+    </resources>
 </document>

@@ -74,6 +74,11 @@ private extension MovieSearchViewController {
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
+
+            if !self.searchVm.movies.isEmpty {
+                self.searchVm.refresh()
+                self.tableView.reloadData()
+            }
             self.searchVm.searchMovies()
         }).disposed(by: disposeBag)
 
@@ -100,7 +105,10 @@ private extension MovieSearchViewController {
     func bindRx() {
         searchController.searchBar.rx.text.orEmpty.bind(to: searchVm.searchText).disposed(by: disposeBag)
 
-        searchVm.isLoading.asObservable().map{ !$0 }.bind(to: indicator.rx.isHidden).disposed(by: disposeBag)
+//        searchVm.isLoading.asObservable().map{ !$0 }.bind(to: indicator.rx.isHidden).disposed(by: disposeBag)
+        searchVm.isLoadingDriver.drive(onNext: { isLoading in
+            self.indicator.isHidden = !(isLoading && self.searchVm.isFirstPage)
+        }).disposed(by: disposeBag)
 
         searchVm.successDriver.filter {  return $0 == true }.drive(onNext: { [weak self] _ in
             self?.reloadAndManageTableView()

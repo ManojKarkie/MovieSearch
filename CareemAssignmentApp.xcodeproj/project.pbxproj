@@ -26,6 +26,7 @@
 		AF0DD902210C6EA000C6E092 /* MovieListTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD901210C6EA000C6E092 /* MovieListTableViewHelper.swift */; };
 		AF0DD904210C72D100C6E092 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD903210C72D100C6E092 /* MovieTableViewCell.swift */; };
 		AF0DD906210C73AD00C6E092 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */; };
+		AF71614E210CDAB30026247B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71614D210CDAB30026247B /* AppCoordinator.swift */; };
 		C046F29D78E74120C34073AC /* Pods_CareemAssignmentAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */; };
 		D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		AF0DD901210C6EA000C6E092 /* MovieListTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewHelper.swift; sourceTree = "<group>"; };
 		AF0DD903210C72D100C6E092 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
+		AF71614D210CDAB30026247B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				AF71614C210CDA9F0026247B /* App Coordinator */,
 				AF0DD8FE210C431100C6E092 /* Movie Search View Model */,
 				AF0DD8F9210A576A00C6E092 /* Models */,
 				AF0DD8F6210A574500C6E092 /* Fetcher */,
@@ -244,6 +247,14 @@
 				AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */,
 			);
 			path = "Movie Search View Model";
+			sourceTree = "<group>";
+		};
+		AF71614C210CDA9F0026247B /* App Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AF71614D210CDAB30026247B /* AppCoordinator.swift */,
+			);
+			path = "App Coordinator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +478,7 @@
 			files = (
 				AF0DD8F0210A4C5A00C6E092 /* UIViewController+Extensions.swift in Sources */,
 				AF0DD8FB210A578700C6E092 /* MovieItem.swift in Sources */,
+				AF71614E210CDAB30026247B /* AppCoordinator.swift in Sources */,
 				AF0DD8F5210A553900C6E092 /* MovieApi.swift in Sources */,
 				AF0DD8F8210A575400C6E092 /* MovieFetcher.swift in Sources */,
 				AF0DD902210C6EA000C6E092 /* MovieListTableViewHelper.swift in Sources */,
