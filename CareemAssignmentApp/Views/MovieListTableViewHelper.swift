@@ -19,7 +19,6 @@ class MovieListTableViewDelegate: NSObject, UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 
         if searchVm.isLastRow(row: indexPath.row) && searchVm.shouldLoadMore {
-
             let spinner = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
             spinner.color = UIColor(red: 0, green: 144.0/255.0, blue: 81.0/255.0, alpha: 1.0)
             spinner.frame = CGRect.init(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 44.0)

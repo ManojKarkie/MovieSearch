@@ -125,7 +125,6 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
                         <outlet property="indicator" destination="5TO-tU-rSI" id="zCr-A4-tE0"/>
-                        <outlet property="noMoviesLabel" destination="0ll-V3-5cP" id="oqu-yd-JZ1"/>
                         <outlet property="tableView" destination="QD5-Gy-EUY" id="LD6-6T-aZD"/>
                     </connections>
                 </viewController>

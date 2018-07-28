@@ -15,7 +15,6 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
     // MARK:- IBOutlets
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var noMoviesLabel: UILabel!
 
     private let disposeBag = DisposeBag()
     fileprivate var searchVm = MovieSearchViewModel()
@@ -42,11 +41,12 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         static let emptyDescription = "No movies found for your search"
     }
 
-//    fileprivate lazy var emptyResultView: EmptyResultControl = {
-//        let emptyView = EmptyResultControl()
-//        let emptyVm = EmptyResultViewModel.init(emptyImageName: Constants.emptyResultLogo, emptyTitle: Constants.emptyTitle, emptyDesc: Constants.emptyDescription)
-//        return emptyView
-//    }()
+    fileprivate lazy var emptyResultView: EmptyResultControl = {
+        let emptyView = EmptyResultControl()
+        let emptyVm = EmptyResultViewModel.init(emptyImageName: Constants.emptyResultLogo, emptyTitle: Constants.emptyTitle, emptyDesc: Constants.emptyDescription)
+        emptyView.setup(vm: emptyVm)
+        return emptyView
+    }()
 
     // MARK:- ViewConroller Lifecycle
 
@@ -61,7 +61,8 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Careem Movies"
+       // title = "Careem Movies"
+        navigationItem.titleView = searchController.searchBar
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,20 +82,20 @@ private extension MovieSearchViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
         searchController.searchBar.placeholder = Constants.searchBarPlaceHolder
-        searchController.searchBar.tintColor = Constants.searchBarTintColor
+        searchController.searchBar.tintColor = UIColor.darkGray
         searchController.hidesNavigationBarDuringPresentation = false
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
-            self.noMoviesLabel.isHidden = true
+            self.tableView.backgroundView?.isHidden = true
             if !self.searchVm.movies.isEmpty {
                 self.searchVm.refresh()
                 self.tableView.reloadData()
             }
             self.searchVm.searchMovies()
         }).disposed(by: disposeBag)
+        //tableView.tableHeaderView = searchController.searchBar
 
-        tableView.tableHeaderView = searchController.searchBar
     }
 
     func setupTableView() {
@@ -103,6 +104,8 @@ private extension MovieSearchViewController {
         tableView.delegate = tvDelegate
         tableView.dataSource = tvDataSource
         tableView.keyboardDismissMode = UIScrollViewKeyboardDismissMode.onDrag
+        tableView.backgroundView = self.emptyResultView
+        tableView.backgroundView?.isHidden = true
     }
 
     func reloadAndManageTableView() {
@@ -111,7 +114,7 @@ private extension MovieSearchViewController {
     }
 
     func manageEmptyResult() {
-        noMoviesLabel.isHidden = !(searchVm.movies.isEmpty)
+        tableView.backgroundView?.isHidden = !(searchVm.movies.isEmpty)
     }
 
 }
@@ -121,7 +124,6 @@ private extension MovieSearchViewController {
     func bindRx() {
         searchController.searchBar.rx.text.orEmpty.bind(to: searchVm.searchText).disposed(by: disposeBag)
 
-//        searchVm.isLoading.asObservable().map{ !$0 }.bind(to: indicator.rx.isHidden).disposed(by: disposeBag)
         searchVm.isLoadingDriver.drive(onNext: { isLoading in
             self.indicator.isHidden = !(isLoading && self.searchVm.isFirstPage)
         }).disposed(by: disposeBag)

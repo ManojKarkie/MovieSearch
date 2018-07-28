@@ -31,10 +31,10 @@ class EmptyResultControl: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setup(data: EmptyResultViewModel) {
-        self.emptyImageView.image  = UIImage.init(named: data.emptyImageName)
-        self.titleLabel.text = data.emptyTitle
-        self.descLabel.text = data.emptyDesc
+    func setup(vm: EmptyResultViewModel) {
+        self.emptyImageView.image  = UIImage.init(named: vm.emptyImageName)
+        self.titleLabel.text = vm.emptyTitle
+        self.descLabel.text = vm.emptyDesc
     }
 }
 
