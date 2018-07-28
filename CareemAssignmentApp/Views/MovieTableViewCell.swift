@@ -32,9 +32,20 @@ class MovieTableViewCell: UITableViewCell {
     }
 
     func setup(cellVm: MovieCellViewModel) {
-        posterImageView.sd_setImage(with: cellVm.posterUrl) { (image, _, _, _) in
-            self.posterImageView.image = image
+//        posterImageView.sd_setImage(with: cellVm.posterUrl) { (image, _, _, _) in
+//            self.posterImageView.image = image
+//        }
+
+        posterImageView.sd_setImage(with: cellVm.posterUrl, placeholderImage: #imageLiteral(resourceName: "movie_placeholder"), options: .refreshCached) { (image, _, _, _) in
+            UIView.transition(with: self.posterImageView,
+                              duration:0.5,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.posterImageView.image = image ?? #imageLiteral(resourceName: "movie_placeholder")
+            },
+                              completion: nil)
         }
+
         nameLabel.text = cellVm.movieName
         releaseDateLabel.text = cellVm.releaseDate
         previewLabel.text = cellVm.preview

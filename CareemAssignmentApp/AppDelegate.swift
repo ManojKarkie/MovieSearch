@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        styleNavBar()
         if window == nil {
             window = UIWindow()
         }
@@ -104,3 +104,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+private extension AppDelegate {
+
+    func styleNavBar() {
+        let navbarAppearance = UINavigationBar.appearance()
+        navbarAppearance.backIndicatorTransitionMaskImage = UIImage()
+        navbarAppearance.shadowImage = UIImage()
+        navbarAppearance.barTintColor = UIColor(red: 0, green: 144.0/255.0, blue: 81.0/255.0, alpha: 1.0)
+        navbarAppearance.backgroundColor = UIColor.white
+        navbarAppearance.isTranslucent = false
+        navbarAppearance.tintColor = UIColor.black
+        navbarAppearance.setBackgroundImage(UIImage(), for: .default)
+        navbarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+    }
+
+}

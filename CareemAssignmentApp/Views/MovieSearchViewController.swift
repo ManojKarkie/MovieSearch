@@ -22,7 +22,9 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
     fileprivate let searchController = UISearchController(searchResultsController: nil)
 
     //MARK:- TableView Datasource and Delegate
-    var tvDelegate = MovieListTableViewDelegate()
+    lazy var tvDelegate:MovieListTableViewDelegate = {
+        return MovieListTableViewDelegate(vm: searchVm)
+    }()
 
     lazy var tvDataSource:MovieListTableViewDataSource = {
         return MovieListTableViewDataSource(vm: searchVm)
@@ -32,6 +34,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         static let searchBarPlaceHolder = "Enter movie name"
         static let errorAlertTitle = "Error!"
         static let tableViewEstimatedHeight: CGFloat = 200.0
+        static let searchBarTintColor =  UIColor(red: 0, green: 144.0/255.0, blue: 81.0/255.0, alpha: 1.0)
     }
 
     // MARK:- ViewConroller Lifecycle
@@ -46,7 +49,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Careem Movie"
+        title = "Careem Movies"
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,13 +64,17 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 private extension MovieSearchViewController {
 
     func setupSearchBar() {
-        searchController.searchBar.barStyle = .default
-        searchController.searchBar.tintColor = UIColor.darkGray
+
         definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
         searchController.searchBar.placeholder = Constants.searchBarPlaceHolder
+        searchController.searchBar.tintColor = Constants.searchBarTintColor
+
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
-            self.searchVm.searchMovies(searchText: "Movie")
+            self.searchVm.searchMovies()
         }).disposed(by: disposeBag)
 
         tableView.tableHeaderView = searchController.searchBar
@@ -78,6 +85,12 @@ private extension MovieSearchViewController {
         tableView.estimatedRowHeight = Constants.tableViewEstimatedHeight
         tableView.delegate = tvDelegate
         tableView.dataSource = tvDataSource
+        tableView.keyboardDismissMode = UIScrollViewKeyboardDismissMode.onDrag
+    }
+
+    func reloadAndManageTableView() {
+        tableView.tableFooterView = nil
+        self.tableView.reloadData()
     }
 
 }
@@ -85,15 +98,25 @@ private extension MovieSearchViewController {
 private extension MovieSearchViewController {
 
     func bindRx() {
+        searchController.searchBar.rx.text.orEmpty.bind(to: searchVm.searchText).disposed(by: disposeBag)
 
         searchVm.isLoading.asObservable().map{ !$0 }.bind(to: indicator.rx.isHidden).disposed(by: disposeBag)
 
         searchVm.successDriver.filter {  return $0 == true }.drive(onNext: { [weak self] _ in
-            self?.tableView.reloadData()
+            self?.reloadAndManageTableView()
         }).disposed(by: disposeBag)
 
         searchVm.errorDriver.filter { return $0 != nil }.drive(onNext: { [weak self] in
+            self?.tableView.tableFooterView = nil
             self?.showAlert(title: Constants.errorAlertTitle, message: $0)
         }).disposed(by: disposeBag)
     }
+}
+
+extension MovieSearchViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+
+    }
+
 }

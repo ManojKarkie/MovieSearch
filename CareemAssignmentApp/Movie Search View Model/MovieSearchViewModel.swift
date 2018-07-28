@@ -26,13 +26,35 @@ class MovieSearchViewModel {
         return error.asDriver()
     }
 
+    var searchText = Variable<String>("")
+
+    fileprivate var pageNumber = 1
+
     var searchResult: MovieSearchResult?
 
-    func searchMovies(searchText: String) {
+    var movies: [MovieItem] = []
+
+    var totalResults: Int {
+        return searchResult?.totalResults ?? 0
+    }
+
+    var searchParams: [String: Any] {
+        return ["query": searchText.value,
+                "page": pageNumber,
+                "api_key": MovieApi.Api_Key]
+    }
+
+    func searchMovies() {
         self.isLoading.value = true
-        MovieFetcher.fetchMovies(searchText: searchText, page: 1, success: { [weak self] result in
+        MovieFetcher.fetchMovies(searchParams: self.searchParams, success: { [weak self] result in
             self?.isLoading.value = false
             self?.searchResult = result
+
+            (self?.searchResult?.movies ?? []).forEach {
+                self?.movies.append($0)
+            }
+
+            self?.managePageNumber()
             self?.success.value = true
         }) { errorMessage in
             self.isLoading.value = false
@@ -42,18 +64,34 @@ class MovieSearchViewModel {
 
 }
 
-// MARK:- TableView Helpers
+// MARK:- TableView Helpers and Pagination Management
 
 extension MovieSearchViewModel {
 
     var numberOfRows: Int {
-        return searchResult?.movies.count ?? 0
+        return movies.count
     }
 
     func cellVmFor(row: Int) -> MovieCellViewModel? {
-        guard let result = searchResult else { return nil }
-        let cellVm = MovieCellViewModel.init(movie: result.movies[row])
+        let cellVm = MovieCellViewModel.init(movie: movies[row])
         return cellVm
+    }
+
+    func managePageNumber() {
+
+        if !movies.isEmpty {
+            pageNumber += 1
+            return
+        }
+        pageNumber = 1
+    }
+
+    func isLastRow(row: Int) -> Bool {
+        return row == movies.count - 1
+    }
+
+    var shouldLoadMore: Bool {
+       return movies.count < totalResults
     }
 
 }

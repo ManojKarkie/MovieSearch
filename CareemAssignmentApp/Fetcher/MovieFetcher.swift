@@ -15,20 +15,24 @@ typealias MovieSearchFailureHandler =  (String) -> Void
 
 struct MovieFetcher {
 
-    static func fetchMovies(searchText: String, page: Int, success: @escaping MovieSearchSuccessHandler, failure: @escaping MovieSearchFailureHandler) {
-        Alamofire.request(MovieApi.searchEndPoint, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+    static func fetchMovies(searchParams: [String: Any], success: @escaping MovieSearchSuccessHandler, failure: @escaping MovieSearchFailureHandler) {
+
+        Alamofire.request(MovieApi.searchEndPoint, method: .get, parameters: searchParams, encoding: URLEncoding.init(destination: .queryString), headers: nil).validate().responseJSON { response in
+
             switch response.result {
+
             case let .success(value):
                 let resultDict = value as?  [String: Any] ?? [:]
+                print("movies result \(resultDict)")
                 if let result  = MovieSearchResult(JSON: resultDict) {
                     success(result)
-                    print("Final result \(result)")
+                    //print("Final result \(result)")
                     return
                 }
                 failure("Something went wrong, Please try again later.")
                 break
             case let .failure(error):
-                print("search error\(error.localizedDescription)")
+                failure(error.localizedDescription)
                 break
             }
         }
