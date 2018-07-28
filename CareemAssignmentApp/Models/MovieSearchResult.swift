@@ -8,16 +8,16 @@
 
 import ObjectMapper
 
-class MovieSearchResult: Mappable {
+struct MovieSearchResult: Mappable {
 
     var pageNumber: Int?
     var totalResults: Int = 0
     var totalPages: Int = 0
     var movies: [MovieItem] = []
 
-    required init?(map: Map) {}
+    init?(map: Map) {}
 
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         pageNumber <- map["page"]
         totalResults <- map["total_results"]
         totalPages <- map["total_pages"]

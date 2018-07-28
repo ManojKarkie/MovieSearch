@@ -8,19 +8,19 @@
 
 import ObjectMapper
 
-class MovieItem: Mappable {
+struct MovieItem: Mappable {
 
     var posterUrl: String?
     var name: String?
     var releaseDate: String?
-    var fullPreview: String?
+    var fullOverview: String?
 
-    required init?(map: Map) {}
+    init?(map: Map) {}
 
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         posterUrl <- map["poster_path"]
         name <- map["title"]
         releaseDate <- map["release_date"]
-        fullPreview <- map["preview"]
+        fullOverview <- map["overview"]
     }
 }

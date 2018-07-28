@@ -22,6 +22,16 @@ extension StoryboardInitializable where Self: UIViewController {
         let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
         return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as! Self
     }
+
+    func showAlert(title: String?, message: String? = "", actionTitle: String? = "Ok") {
+
+        let alertStyle: UIAlertControllerStyle = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? .alert : .actionSheet
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: alertStyle)
+        let action = UIAlertAction(title: actionTitle, style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 
