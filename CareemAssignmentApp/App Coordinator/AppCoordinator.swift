@@ -34,6 +34,7 @@ final class AppCoordinator: Coordinator {
     func start() {
         let movieSearchVc = MovieSearchViewController.initFromStoryboard(name: "MovieSearch")
         let nav = UINavigationController.init(rootViewController: movieSearchVc)
+        nav.navigationBar.isTranslucent = false
         window?.rootViewController = nav
     }
 }

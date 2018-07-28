@@ -53,9 +53,10 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupSearchBar()
         setupTableView()
+        setupSearchBar()
         bindRx()
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +82,7 @@ private extension MovieSearchViewController {
         searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
         searchController.searchBar.placeholder = Constants.searchBarPlaceHolder
         searchController.searchBar.tintColor = Constants.searchBarTintColor
+        searchController.hidesNavigationBarDuringPresentation = false
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search

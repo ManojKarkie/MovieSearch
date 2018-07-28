@@ -19,13 +19,13 @@
         <!--Movie Search View Controller-->
         <scene sceneID="SPV-NG-Yzf">
             <objects>
-                <viewController storyboardIdentifier="MovieSearchViewController" id="Rsw-zj-Z7T" customClass="MovieSearchViewController" customModule="CareemAssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieSearchViewController" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="Rsw-zj-Z7T" customClass="MovieSearchViewController" customModule="CareemAssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CrQ-5j-Gam">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QD5-Gy-EUY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieTableViewCell" rowHeight="100" id="Hwo-1T-gQC" customClass="MovieTableViewCell" customModule="CareemAssignmentApp" customModuleProvider="target">
@@ -110,18 +110,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QD5-Gy-EUY" secondAttribute="bottom" id="Qe3-ft-Is6"/>
                             <constraint firstItem="feX-Wl-bQ3" firstAttribute="trailing" secondItem="0ll-V3-5cP" secondAttribute="trailing" constant="20" id="V1y-IK-Q30"/>
                             <constraint firstItem="5TO-tU-rSI" firstAttribute="centerX" secondItem="CrQ-5j-Gam" secondAttribute="centerX" id="WS7-kI-TR6"/>
                             <constraint firstItem="0ll-V3-5cP" firstAttribute="leading" secondItem="feX-Wl-bQ3" secondAttribute="leading" constant="20" id="adU-Yz-AHP"/>
+                            <constraint firstItem="QD5-Gy-EUY" firstAttribute="top" secondItem="feX-Wl-bQ3" secondAttribute="top" id="gTp-ex-1Ug"/>
                             <constraint firstItem="0ll-V3-5cP" firstAttribute="centerY" secondItem="CrQ-5j-Gam" secondAttribute="centerY" id="hft-JL-f7O"/>
                             <constraint firstItem="feX-Wl-bQ3" firstAttribute="trailing" secondItem="QD5-Gy-EUY" secondAttribute="trailing" id="kNv-xw-U4j"/>
-                            <constraint firstItem="QD5-Gy-EUY" firstAttribute="top" secondItem="CrQ-5j-Gam" secondAttribute="top" id="lxh-X9-EKV"/>
                             <constraint firstItem="QD5-Gy-EUY" firstAttribute="leading" secondItem="feX-Wl-bQ3" secondAttribute="leading" id="qfy-BY-wDI"/>
                             <constraint firstItem="5TO-tU-rSI" firstAttribute="centerY" secondItem="CrQ-5j-Gam" secondAttribute="centerY" id="uAJ-4z-6f0"/>
-                            <constraint firstItem="feX-Wl-bQ3" firstAttribute="bottom" secondItem="QD5-Gy-EUY" secondAttribute="bottom" id="xN8-xo-jbS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="feX-Wl-bQ3"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
                         <outlet property="indicator" destination="5TO-tU-rSI" id="zCr-A4-tE0"/>
                         <outlet property="noMoviesLabel" destination="0ll-V3-5cP" id="oqu-yd-JZ1"/>
