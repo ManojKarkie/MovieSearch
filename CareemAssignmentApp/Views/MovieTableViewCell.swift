@@ -32,9 +32,6 @@ class MovieTableViewCell: UITableViewCell {
     }
 
     func setup(cellVm: MovieCellViewModel) {
-//        posterImageView.sd_setImage(with: cellVm.posterUrl) { (image, _, _, _) in
-//            self.posterImageView.image = image
-//        }
 
         posterImageView.sd_setImage(with: cellVm.posterUrl, placeholderImage: #imageLiteral(resourceName: "movie_placeholder"), options: .refreshCached) { (image, _, _, _) in
             UIView.transition(with: self.posterImageView,
