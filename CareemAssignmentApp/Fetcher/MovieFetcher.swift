@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
+// MARK:- Success and failure closure typealias
+
 typealias MovieSearchSuccessHandler = (MovieSearchResult) -> Void
 typealias MovieSearchFailureHandler =  (String) -> Void
 

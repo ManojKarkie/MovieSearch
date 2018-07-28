@@ -50,5 +50,4 @@ class MovieListTableViewDataSource: NSObject, UITableViewDataSource {
         return movieCell
     }
 
-
 }

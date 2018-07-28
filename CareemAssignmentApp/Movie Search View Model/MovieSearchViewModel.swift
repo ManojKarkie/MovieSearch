@@ -87,7 +87,6 @@ extension MovieSearchViewModel {
     }
 
     func managePageNumber() {
-
         if !movies.isEmpty {
             pageNumber += 1
             return

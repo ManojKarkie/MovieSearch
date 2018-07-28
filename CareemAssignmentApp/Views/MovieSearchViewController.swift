@@ -56,12 +56,10 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         setupTableView()
         setupSearchBar()
         bindRx()
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // title = "Careem Movies"
         navigationItem.titleView = searchController.searchBar
     }
 
@@ -94,8 +92,6 @@ private extension MovieSearchViewController {
             }
             self.searchVm.searchMovies()
         }).disposed(by: disposeBag)
-        //tableView.tableHeaderView = searchController.searchBar
-
     }
 
     func setupTableView() {

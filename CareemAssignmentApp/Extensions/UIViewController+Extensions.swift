@@ -33,6 +33,3 @@ extension StoryboardInitializable where Self: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
-
-
-
