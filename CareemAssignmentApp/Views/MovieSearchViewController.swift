@@ -15,11 +15,13 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
     // MARK:- IBOutlets
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noMoviesLabel: UILabel!
 
     private let disposeBag = DisposeBag()
     fileprivate var searchVm = MovieSearchViewModel()
 
     fileprivate let searchController = UISearchController(searchResultsController: nil)
+
 
     //MARK:- TableView Datasource and Delegate
     lazy var tvDelegate:MovieListTableViewDelegate = {
@@ -35,7 +37,16 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         static let errorAlertTitle = "Error!"
         static let tableViewEstimatedHeight: CGFloat = 200.0
         static let searchBarTintColor =  UIColor(red: 0, green: 144.0/255.0, blue: 81.0/255.0, alpha: 1.0)
+        static let emptyResultLogo = "noResult"
+        static let emptyTitle = "No movies found"
+        static let emptyDescription = "No movies found for your search"
     }
+
+//    fileprivate lazy var emptyResultView: EmptyResultControl = {
+//        let emptyView = EmptyResultControl()
+//        let emptyVm = EmptyResultViewModel.init(emptyImageName: Constants.emptyResultLogo, emptyTitle: Constants.emptyTitle, emptyDesc: Constants.emptyDescription)
+//        return emptyView
+//    }()
 
     // MARK:- ViewConroller Lifecycle
 
@@ -64,7 +75,6 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 private extension MovieSearchViewController {
 
     func setupSearchBar() {
-
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
@@ -74,7 +84,7 @@ private extension MovieSearchViewController {
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
-
+            self.noMoviesLabel.isHidden = true
             if !self.searchVm.movies.isEmpty {
                 self.searchVm.refresh()
                 self.tableView.reloadData()
@@ -98,6 +108,10 @@ private extension MovieSearchViewController {
         self.tableView.reloadData()
     }
 
+    func manageEmptyResult() {
+        noMoviesLabel.isHidden = !(searchVm.movies.isEmpty)
+    }
+
 }
 
 private extension MovieSearchViewController {
@@ -111,6 +125,7 @@ private extension MovieSearchViewController {
         }).disposed(by: disposeBag)
 
         searchVm.successDriver.filter {  return $0 == true }.drive(onNext: { [weak self] _ in
+            self?.manageEmptyResult()
             self?.reloadAndManageTableView()
         }).disposed(by: disposeBag)
 

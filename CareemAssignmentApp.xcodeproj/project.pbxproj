@@ -27,6 +27,8 @@
 		AF0DD904210C72D100C6E092 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD903210C72D100C6E092 /* MovieTableViewCell.swift */; };
 		AF0DD906210C73AD00C6E092 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */; };
 		AF71614E210CDAB30026247B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71614D210CDAB30026247B /* AppCoordinator.swift */; };
+		AF716151210CE4460026247B /* EmptyResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF716150210CE4460026247B /* EmptyResultView.xib */; };
+		AF716153210CE4830026247B /* EmptyResultControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF716152210CE4830026247B /* EmptyResultControl.swift */; };
 		C046F29D78E74120C34073AC /* Pods_CareemAssignmentAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */; };
 		D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,8 @@
 		AF0DD903210C72D100C6E092 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
 		AF71614D210CDAB30026247B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AF716150210CE4460026247B /* EmptyResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyResultView.xib; sourceTree = "<group>"; };
+		AF716152210CE4830026247B /* EmptyResultControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultControl.swift; sourceTree = "<group>"; };
 		B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				AF71614F210CE4280026247B /* Empty State */,
 				AF71614C210CDA9F0026247B /* App Coordinator */,
 				AF0DD8FE210C431100C6E092 /* Movie Search View Model */,
 				AF0DD8F9210A576A00C6E092 /* Models */,
@@ -255,6 +260,15 @@
 				AF71614D210CDAB30026247B /* AppCoordinator.swift */,
 			);
 			path = "App Coordinator";
+			sourceTree = "<group>";
+		};
+		AF71614F210CE4280026247B /* Empty State */ = {
+			isa = PBXGroup;
+			children = (
+				AF716150210CE4460026247B /* EmptyResultView.xib */,
+				AF716152210CE4830026247B /* EmptyResultControl.swift */,
+			);
+			path = "Empty State";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0DD8C8210A41D200C6E092 /* LaunchScreen.storyboard in Resources */,
+				AF716151210CE4460026247B /* EmptyResultView.xib in Resources */,
 				AF0DD8C5210A41D200C6E092 /* Assets.xcassets in Resources */,
 				AF0DD8C0210A41CF00C6E092 /* Main.storyboard in Resources */,
 				AF0DD8ED210A4C0000C6E092 /* MovieSearch.storyboard in Resources */,
@@ -488,6 +503,7 @@
 				AF0DD8C3210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld in Sources */,
 				AF0DD8F2210A4CC900C6E092 /* MovieSearchViewController.swift in Sources */,
 				AF0DD904210C72D100C6E092 /* MovieTableViewCell.swift in Sources */,
+				AF716153210CE4830026247B /* EmptyResultControl.swift in Sources */,
 				AF0DD8BB210A41CF00C6E092 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

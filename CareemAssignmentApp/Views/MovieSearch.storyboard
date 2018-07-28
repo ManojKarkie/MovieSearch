@@ -101,10 +101,19 @@
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                 <color key="color" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="No movies found" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ll-V3-5cP">
+                                <rect key="frame" x="20" y="325" width="335" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="feX-Wl-bQ3" firstAttribute="trailing" secondItem="0ll-V3-5cP" secondAttribute="trailing" constant="20" id="V1y-IK-Q30"/>
                             <constraint firstItem="5TO-tU-rSI" firstAttribute="centerX" secondItem="CrQ-5j-Gam" secondAttribute="centerX" id="WS7-kI-TR6"/>
+                            <constraint firstItem="0ll-V3-5cP" firstAttribute="leading" secondItem="feX-Wl-bQ3" secondAttribute="leading" constant="20" id="adU-Yz-AHP"/>
+                            <constraint firstItem="0ll-V3-5cP" firstAttribute="centerY" secondItem="CrQ-5j-Gam" secondAttribute="centerY" id="hft-JL-f7O"/>
                             <constraint firstItem="feX-Wl-bQ3" firstAttribute="trailing" secondItem="QD5-Gy-EUY" secondAttribute="trailing" id="kNv-xw-U4j"/>
                             <constraint firstItem="QD5-Gy-EUY" firstAttribute="top" secondItem="CrQ-5j-Gam" secondAttribute="top" id="lxh-X9-EKV"/>
                             <constraint firstItem="QD5-Gy-EUY" firstAttribute="leading" secondItem="feX-Wl-bQ3" secondAttribute="leading" id="qfy-BY-wDI"/>
@@ -115,6 +124,7 @@
                     </view>
                     <connections>
                         <outlet property="indicator" destination="5TO-tU-rSI" id="zCr-A4-tE0"/>
+                        <outlet property="noMoviesLabel" destination="0ll-V3-5cP" id="oqu-yd-JZ1"/>
                         <outlet property="tableView" destination="QD5-Gy-EUY" id="LD6-6T-aZD"/>
                     </connections>
                 </viewController>
