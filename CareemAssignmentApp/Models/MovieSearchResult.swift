@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class MovieSearchResult {
+class MovieSearchResult: Mappable {
 
     var pageNumber: Int?
     var totalResults: Int = 0

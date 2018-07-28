@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class MovieItem {
+class MovieItem: Mappable {
 
     var posterUrl: String?
     var name: String?

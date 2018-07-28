@@ -14,6 +14,8 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 
     private let disposeBag = DisposeBag()
 
+    fileprivate let searchVm = MovieSearchViewModel()
+
     fileprivate let searchController = UISearchController(searchResultsController: nil)
 
     // MARK:- ViewConroller Lifecycle
@@ -49,6 +51,7 @@ private extension MovieSearchViewController {
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
             print("Search Bar search button pressed-----")
+            self.searchVm.searchMovies(searchText: "Movie")
         }).disposed(by: disposeBag)
     }
 
