@@ -19,8 +19,15 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
     private let disposeBag = DisposeBag()
     fileprivate var searchVm = MovieSearchViewModel()
 
-    fileprivate let searchController = UISearchController(searchResultsController: nil)
+    fileprivate lazy var autoSuggestVc: AutoSuggestionViewController =  {
+        let vc = AutoSuggestionViewController.initFromStoryboard(name: "AutoSuggestion")
+        return vc
+    }()
 
+    fileprivate lazy var searchController: UISearchController = {
+       let controller =  UISearchController(searchResultsController: self.autoSuggestVc)
+        return controller
+    } ()
 
     //MARK:- TableView Datasource and Delegate
     lazy var tvDelegate:MovieListTableViewDelegate = {
@@ -82,9 +89,13 @@ private extension MovieSearchViewController {
         searchController.searchBar.placeholder = Constants.searchBarPlaceHolder
         searchController.searchBar.tintColor = UIColor.darkGray
         searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.sizeToFit()
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
+
+            self.searchController.searchResultsController?.dismiss(animated: false, completion: nil)
+
             self.tableView.backgroundView?.isHidden = true
             if !self.searchVm.movies.isEmpty {
                 self.searchVm.refresh()
