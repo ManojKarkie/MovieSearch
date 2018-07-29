@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="tcJ-cV-f06">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AutoSuggestionTableViewCell" rowHeight="50" id="tcJ-cV-f06" customClass="AutoSuggestionTableViewCell" customModule="CareemAssignmentApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tcJ-cV-f06" id="b9X-tm-lib">
@@ -47,17 +47,30 @@
                                                 <constraint firstAttribute="width" constant="20" id="xRm-hN-wwk"/>
                                             </constraints>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPZ-df-qUd">
+                                            <rect key="frame" x="0.0" y="49" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="qW8-y0-U0E"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="dlB-wa-Z1L" firstAttribute="centerY" secondItem="yPc-oR-myh" secondAttribute="centerY" id="5lK-0E-grn"/>
+                                        <constraint firstAttribute="trailing" secondItem="dPZ-df-qUd" secondAttribute="trailing" id="8Sm-NH-pHs"/>
+                                        <constraint firstItem="dPZ-df-qUd" firstAttribute="leading" secondItem="b9X-tm-lib" secondAttribute="leading" id="BL7-GR-3RJ"/>
                                         <constraint firstItem="wTr-Re-gms" firstAttribute="leading" secondItem="dlB-wa-Z1L" secondAttribute="trailing" constant="8" id="EKL-vY-lZW"/>
                                         <constraint firstItem="wTr-Re-gms" firstAttribute="centerY" secondItem="dlB-wa-Z1L" secondAttribute="centerY" id="LzZ-6a-NQs"/>
                                         <constraint firstItem="yPc-oR-myh" firstAttribute="leading" secondItem="b9X-tm-lib" secondAttribute="leading" constant="15" id="mLS-Lg-Fhq"/>
                                         <constraint firstItem="dlB-wa-Z1L" firstAttribute="leading" secondItem="yPc-oR-myh" secondAttribute="trailing" constant="17" id="meJ-FK-9k0"/>
                                         <constraint firstAttribute="trailing" secondItem="wTr-Re-gms" secondAttribute="trailing" constant="15" id="qx4-nB-mFc"/>
                                         <constraint firstItem="yPc-oR-myh" firstAttribute="centerY" secondItem="b9X-tm-lib" secondAttribute="centerY" id="t1U-UU-aCO"/>
+                                        <constraint firstAttribute="bottom" secondItem="dPZ-df-qUd" secondAttribute="bottom" id="urN-yg-4gv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="recentSearchText" destination="dlB-wa-Z1L" id="LQi-jc-JzK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -43,14 +43,31 @@ extension RecentSearch {
 
     // MARK:- Return Top 10 Searches
 
-    public var topSearches: [RecentSearch] {
+    public class var topSearches: [RecentSearch] {
 
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
 
         let fetchRequest = NSFetchRequest<RecentSearch>(entityName: "RecentSearch")
+
         do {
-            let results = try appDelegate.managedObjectContext.fetch(fetchRequest)
-            return results
+            let fetchResults = try appDelegate.managedObjectContext.fetch(fetchRequest)
+
+            let results: [RecentSearch] = Array(fetchResults.reversed())
+
+            if results.count > 10 {
+                results.forEach { recentItem in
+                    let index = results.index(of: recentItem) ?? 0
+                    if index > 9 {
+                        appDelegate.managedObjectContext.delete(recentItem)
+                    }
+                }
+            }
+
+            let filteredResults = results.filter { recentItem in
+                let index = results.index(of: recentItem) ?? 0
+                return index <= 9
+            }
+            return filteredResults
         }catch let exception {
             print("Error in fetching top recent searches \(exception)")
 

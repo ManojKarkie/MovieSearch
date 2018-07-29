@@ -49,7 +49,9 @@ class MovieSearchViewModel {
     }
 
     func searchMovies() {
+
         self.isLoading.value = true
+
         MovieFetcher.fetchMovies(searchParams: self.searchParams, success: { [weak self] result in
             self?.isLoading.value = false
             self?.searchResult = result

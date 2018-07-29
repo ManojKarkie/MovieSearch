@@ -21,6 +21,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 
     fileprivate lazy var autoSuggestVc: AutoSuggestionViewController =  {
         let vc = AutoSuggestionViewController.initFromStoryboard(name: "AutoSuggestion")
+        vc.suggestionDelegate = self
         return vc
     }()
 
@@ -90,18 +91,11 @@ private extension MovieSearchViewController {
         searchController.searchBar.tintColor = UIColor.darkGray
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.sizeToFit()
+        searchController.delegate = self
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
-
-            self.searchController.searchResultsController?.dismiss(animated: false, completion: nil)
-
-            self.tableView.backgroundView?.isHidden = true
-            if !self.searchVm.movies.isEmpty {
-                self.searchVm.refresh()
-                self.tableView.reloadData()
-            }
-            self.searchVm.searchMovies()
+            self.reloadAndSearch()
         }).disposed(by: disposeBag)
     }
 
@@ -145,12 +139,47 @@ private extension MovieSearchViewController {
             self?.showAlert(title: Constants.errorAlertTitle, message: $0)
         }).disposed(by: disposeBag)
     }
+
+    func reloadAndSearch() {
+
+        self.searchController.searchResultsController?.dismiss(animated: false, completion: nil)
+
+        self.tableView.backgroundView?.isHidden = true
+        if !self.searchVm.movies.isEmpty {
+            self.searchVm.refresh()
+            self.tableView.reloadData()
+        }
+        self.searchVm.searchMovies()
+    }
+}
+
+extension MovieSearchViewController: UISearchControllerDelegate {
+
+    func willPresentSearchController(_ searchController: UISearchController) {
+        //searchController.view.isHidden = false
+    }
+
 }
 
 extension MovieSearchViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
 
-    }
+        searchController.searchResultsController?.view.isHidden = false
 
+    }
+}
+
+// MARK:- Suggestion Delegate
+
+extension MovieSearchViewController: AutoSuggestionDelegate {
+
+    func didTapSuggestion(suggestion: String?) {
+
+        guard let sugg = suggestion else { return }
+        searchController.searchBar.text = sugg
+        searchVm.searchText.value = sugg
+        searchController.searchBar.resignFirstResponder()
+        reloadAndSearch()
+    }
 }

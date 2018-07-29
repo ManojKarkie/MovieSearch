@@ -35,6 +35,8 @@
 		AFABC8F4210DBC080022366E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC8F3210DBC080022366E /* String+Extensions.swift */; };
 		AFABC8FF210E0DF20022366E /* RecentSearch+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC8FD210E0DF20022366E /* RecentSearch+CoreDataClass.swift */; };
 		AFABC900210E0DF20022366E /* RecentSearch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC8FE210E0DF20022366E /* RecentSearch+CoreDataProperties.swift */; };
+		AFABC902210E295F0022366E /* AutoSuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */; };
+		AFABC904210E2B450022366E /* AutoSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */; };
 		C046F29D78E74120C34073AC /* Pods_CareemAssignmentAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */; };
 		D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		AFABC8F3210DBC080022366E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		AFABC8FD210E0DF20022366E /* RecentSearch+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearch+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFABC8FE210E0DF20022366E /* RecentSearch+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearch+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionViewModel.swift; sourceTree = "<group>"; };
+		AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 				AF0DD8F1210A4CC900C6E092 /* MovieSearchViewController.swift */,
 				AF0DD901210C6EA000C6E092 /* MovieListTableViewHelper.swift */,
 				AFABC8EF210DAF390022366E /* AutoSuggestionViewController.swift */,
+				AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			children = (
 				AF0DD8FF210C432F00C6E092 /* MovieSearchViewModel.swift */,
 				AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */,
+				AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */,
 			);
 			path = "Movie Search View Model";
 			sourceTree = "<group>";
@@ -510,7 +516,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFABC904210E2B450022366E /* AutoSuggestionTableViewCell.swift in Sources */,
 				AF0DD8F0210A4C5A00C6E092 /* UIViewController+Extensions.swift in Sources */,
+				AFABC902210E295F0022366E /* AutoSuggestionViewModel.swift in Sources */,
 				AF0DD8FB210A578700C6E092 /* MovieItem.swift in Sources */,
 				AF71614E210CDAB30026247B /* AppCoordinator.swift in Sources */,
 				AF0DD8F5210A553900C6E092 /* MovieApi.swift in Sources */,

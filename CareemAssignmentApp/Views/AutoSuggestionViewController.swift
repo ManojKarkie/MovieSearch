@@ -8,7 +8,19 @@
 
 import UIKit
 
+// MARK:- Delegate to relay the users selection of Auto Suggestion listed in table view
+
+protocol AutoSuggestionDelegate : class  {
+    func didTapSuggestion(suggestion: String?)
+}
+
 class AutoSuggestionViewController: UITableViewController, StoryboardInitializable {
+
+    // MARK:- Delegate
+
+    weak var suggestionDelegate: AutoSuggestionDelegate?
+
+    fileprivate var autoSuggestionVm = AutoSuggestionViewModel()
 
     // MARKK:-  ViewController Lifecycle
 
@@ -16,6 +28,12 @@ class AutoSuggestionViewController: UITableViewController, StoryboardInitializab
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.view.backgroundColor = UIColor.init(hex: "#F7F7F6")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        autoSuggestionVm.fetchTopSuggestions()
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,15 +48,16 @@ class AutoSuggestionViewController: UITableViewController, StoryboardInitializab
 extension AutoSuggestionViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return autoSuggestionVm.numberOfSection
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return autoSuggestionVm.numberOfRows
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AutoSuggestionTableViewCell", for: indexPath) as! AutoSuggestionTableViewCell
+        cell.setup(searchText: autoSuggestionVm.searchTextFor(row: indexPath.row))
         return cell
     }
 }
@@ -51,13 +70,13 @@ extension AutoSuggestionViewController {
 
         let headerView = UIView()
         headerView.backgroundColor = UIColor.init(hex: "#F7F7F6")
-        headerView.frame = CGRect.init(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 44.0)
+        headerView.frame = CGRect.init(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 50.0)
 
         let titleLabel = UILabel()
         titleLabel.textAlignment = .left
         titleLabel.textColor = UIColor.init(hex: "#424242")
         titleLabel.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.medium)
-        titleLabel.text =  "Recent Searches"
+        titleLabel.text =  "RECENT SEARCHES"
 
         let separatorView = UIView()
         separatorView.backgroundColor = UIColor.init(hex: "#EBEBF1")
@@ -84,6 +103,13 @@ extension AutoSuggestionViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44.0
+        return 50.0
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let suggestion = autoSuggestionVm.searchTextFor(row: indexPath.row)
+        suggestionDelegate?.didTapSuggestion(suggestion: suggestion)
+
     }
 }
