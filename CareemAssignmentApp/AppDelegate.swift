@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
 
-    // MARK:- For iOS 9 and below support
+    // MARK:- For iOS 9 support
 
     lazy var applicationDocumentsDirectory: URL = {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -147,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
 
         }else {
-            //MARK:- For iOS 9.0 and below support
+            //MARK:- For iOS 9.0 support
 
             if managedObjectContext.hasChanges {
                 do {
@@ -164,6 +164,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+// MARK:- Navigation Bar style setup
 
 private extension AppDelegate {
 

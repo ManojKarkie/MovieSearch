@@ -58,6 +58,7 @@ class MovieSearchViewModel {
                 self?.movies.append($0)
             }
 
+            self?.saveSearch(searchResult: result)
             self?.managePageNumber()
             self?.success.value = true
         }) { errorMessage in
@@ -86,6 +87,12 @@ extension MovieSearchViewModel {
         return cellVm
     }
 
+}
+
+// MARK:- Pagination
+
+extension MovieSearchViewModel {
+
     func managePageNumber() {
         if !movies.isEmpty {
             pageNumber += 1
@@ -94,16 +101,28 @@ extension MovieSearchViewModel {
         pageNumber = 1
     }
 
-    var isFirstPage: Bool {
-        return pageNumber == 1
-    }
-
     func isLastRow(row: Int) -> Bool {
         return row == movies.count - 1
     }
 
-    var shouldLoadMore: Bool {
-       return movies.count < totalResults && !self.searchText.value.isEmpty
+    var isFirstPage: Bool {
+        return pageNumber == 1
     }
 
+    var shouldLoadMore: Bool {
+        return movies.count < totalResults && !self.searchText.value.isEmpty
+    }
+
+}
+
+// MARK:- Recent Search management
+
+extension MovieSearchViewModel {
+
+    func saveSearch(searchResult: MovieSearchResult) {
+
+        if !self.searchText.value.isEmpty && !searchResult.movies.isEmpty  {
+            RecentSearch.saveRecent(text: self.searchText.value)
+        }
+    }
 }
