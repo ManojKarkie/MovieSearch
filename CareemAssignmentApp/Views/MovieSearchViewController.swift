@@ -90,7 +90,6 @@ private extension MovieSearchViewController {
         searchController.searchBar.placeholder = Constants.searchBarPlaceHolder
         searchController.searchBar.tintColor = UIColor.darkGray
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.sizeToFit()
         searchController.delegate = self
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
@@ -143,6 +142,7 @@ private extension MovieSearchViewController {
     func reloadAndSearch() {
 
         self.searchController.searchResultsController?.dismiss(animated: false, completion: nil)
+        searchController.searchBar.setShowsCancelButton(false, animated: true)
 
         self.tableView.backgroundView?.isHidden = true
         if !self.searchVm.movies.isEmpty {
