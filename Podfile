@@ -16,6 +16,13 @@ target 'CareemAssignmentApp' do
   target 'CareemAssignmentAppTests' do
     inherit! :search_paths
     # Pods for testing
+
+pod 'Alamofire', '~> 4.5.0'
+pod 'RxSwift',    '~> 4.0'
+pod 'RxCocoa',    '~> 4.0'
+pod 'ObjectMapper', '~> 3.3'
+pod 'SDWebImage', '~> 4.0'
+
   end
 
   target 'CareemAssignmentAppUITests' do

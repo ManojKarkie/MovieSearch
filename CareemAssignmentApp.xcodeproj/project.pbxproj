@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		22F268497B567B8452533146 /* Pods_CareemAssignmentAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E3A029899CC751A43F445C /* Pods_CareemAssignmentAppUITests.framework */; };
+		4CE945AF0AB0260CC52C00F5 /* Pods_CareemAssignmentAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */; };
 		AF0DD8BB210A41CF00C6E092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */; };
 		AF0DD8C0210A41CF00C6E092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8BE210A41CF00C6E092 /* Main.storyboard */; };
 		AF0DD8C3210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8C1210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld */; };
 		AF0DD8C5210A41D200C6E092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8C4210A41D200C6E092 /* Assets.xcassets */; };
 		AF0DD8C8210A41D200C6E092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */; };
-		AF0DD8D3210A41D200C6E092 /* CareemAssignmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8D2210A41D200C6E092 /* CareemAssignmentAppTests.swift */; };
 		AF0DD8DE210A41D200C6E092 /* CareemAssignmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8DD210A41D200C6E092 /* CareemAssignmentAppUITests.swift */; };
 		AF0DD8ED210A4C0000C6E092 /* MovieSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0DD8EC210A4C0000C6E092 /* MovieSearch.storyboard */; };
 		AF0DD8F0210A4C5A00C6E092 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0DD8EF210A4C5A00C6E092 /* UIViewController+Extensions.swift */; };
@@ -37,19 +37,19 @@
 		AFABC900210E0DF20022366E /* RecentSearch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC8FE210E0DF20022366E /* RecentSearch+CoreDataProperties.swift */; };
 		AFABC902210E295F0022366E /* AutoSuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */; };
 		AFABC904210E2B450022366E /* AutoSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */; };
-		C046F29D78E74120C34073AC /* Pods_CareemAssignmentAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2019AB16588D92EF316DB /* Pods_CareemAssignmentAppTests.framework */; };
+		AFABC90C210FAB760022366E /* CareemAssignmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC90B210FAB760022366E /* CareemAssignmentAppTests.swift */; };
 		D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF0DD8CF210A41D200C6E092 /* PBXContainerItemProxy */ = {
+		AF0DD8DA210A41D200C6E092 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF0DD8AF210A41CF00C6E092 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AF0DD8B6210A41CF00C6E092;
 			remoteInfo = CareemAssignmentApp;
 		};
-		AF0DD8DA210A41D200C6E092 /* PBXContainerItemProxy */ = {
+		AFABC90E210FAB760022366E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF0DD8AF210A41CF00C6E092 /* Project object */;
 			proxyType = 1;
@@ -72,7 +72,6 @@
 		AF0DD8C4210A41D200C6E092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0DD8C7210A41D200C6E092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0DD8C9210A41D200C6E092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF0DD8CE210A41D200C6E092 /* CareemAssignmentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0DD8D2210A41D200C6E092 /* CareemAssignmentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentAppTests.swift; sourceTree = "<group>"; };
 		AF0DD8D4210A41D200C6E092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF0DD8D9210A41D200C6E092 /* CareemAssignmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +99,9 @@
 		AFABC8FE210E0DF20022366E /* RecentSearch+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearch+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionViewModel.swift; sourceTree = "<group>"; };
 		AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		AFABC909210FAB750022366E /* CareemAssignmentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFABC90B210FAB760022366E /* CareemAssignmentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentAppTests.swift; sourceTree = "<group>"; };
+		AFABC90D210FAB760022366E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,19 +116,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0DD8CB210A41D200C6E092 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C046F29D78E74120C34073AC /* Pods_CareemAssignmentAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF0DD8D6210A41D200C6E092 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				22F268497B567B8452533146 /* Pods_CareemAssignmentAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFABC906210FAB750022366E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE945AF0AB0260CC52C00F5 /* Pods_CareemAssignmentAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +164,7 @@
 				AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */,
 				AF0DD8D1210A41D200C6E092 /* CareemAssignmentAppTests */,
 				AF0DD8DC210A41D200C6E092 /* CareemAssignmentAppUITests */,
+				AFABC90A210FAB760022366E /* CareemAssignmentAppTests */,
 				AF0DD8B8210A41CF00C6E092 /* Products */,
 				8C6F88AD5E1A5AE07C28EF74 /* Pods */,
 				85A95A773431D0BAB924D37B /* Frameworks */,
@@ -172,8 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				AF0DD8B7210A41CF00C6E092 /* CareemAssignmentApp.app */,
-				AF0DD8CE210A41D200C6E092 /* CareemAssignmentAppTests.xctest */,
 				AF0DD8D9210A41D200C6E092 /* CareemAssignmentAppUITests.xctest */,
+				AFABC909210FAB750022366E /* CareemAssignmentAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,6 +298,15 @@
 			path = "Empty State";
 			sourceTree = "<group>";
 		};
+		AFABC90A210FAB760022366E /* CareemAssignmentAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFABC90B210FAB760022366E /* CareemAssignmentAppTests.swift */,
+				AFABC90D210FAB760022366E /* Info.plist */,
+			);
+			path = CareemAssignmentAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,25 +329,6 @@
 			productReference = AF0DD8B7210A41CF00C6E092 /* CareemAssignmentApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AF0DD8CD210A41D200C6E092 /* CareemAssignmentAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF0DD8E5210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppTests" */;
-			buildPhases = (
-				EA60AEBA04C246E04F96C9D4 /* [CP] Check Pods Manifest.lock */,
-				AF0DD8CA210A41D200C6E092 /* Sources */,
-				AF0DD8CB210A41D200C6E092 /* Frameworks */,
-				AF0DD8CC210A41D200C6E092 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF0DD8D0210A41D200C6E092 /* PBXTargetDependency */,
-			);
-			name = CareemAssignmentAppTests;
-			productName = CareemAssignmentAppTests;
-			productReference = AF0DD8CE210A41D200C6E092 /* CareemAssignmentAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		AF0DD8D8210A41D200C6E092 /* CareemAssignmentAppUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF0DD8E8210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppUITests" */;
@@ -355,6 +348,26 @@
 			productReference = AF0DD8D9210A41D200C6E092 /* CareemAssignmentAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AFABC908210FAB750022366E /* CareemAssignmentAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFABC910210FAB760022366E /* Build configuration list for PBXNativeTarget "CareemAssignmentAppTests" */;
+			buildPhases = (
+				07A7EB3DC6C6C706D219B7DA /* [CP] Check Pods Manifest.lock */,
+				AFABC905210FAB750022366E /* Sources */,
+				AFABC906210FAB750022366E /* Frameworks */,
+				AFABC907210FAB750022366E /* Resources */,
+				66BCD5B38F17E6FA0D4029E4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFABC90F210FAB760022366E /* PBXTargetDependency */,
+			);
+			name = CareemAssignmentAppTests;
+			productName = CareemAssignmentAppTests;
+			productReference = AFABC909210FAB750022366E /* CareemAssignmentAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -368,11 +381,11 @@
 					AF0DD8B6210A41CF00C6E092 = {
 						CreatedOnToolsVersion = 9.3;
 					};
-					AF0DD8CD210A41D200C6E092 = {
+					AF0DD8D8210A41D200C6E092 = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = AF0DD8B6210A41CF00C6E092;
 					};
-					AF0DD8D8210A41D200C6E092 = {
+					AFABC908210FAB750022366E = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = AF0DD8B6210A41CF00C6E092;
 					};
@@ -392,8 +405,8 @@
 			projectRoot = "";
 			targets = (
 				AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */,
-				AF0DD8CD210A41D200C6E092 /* CareemAssignmentAppTests */,
 				AF0DD8D8210A41D200C6E092 /* CareemAssignmentAppUITests */,
+				AFABC908210FAB750022366E /* CareemAssignmentAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,14 +425,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0DD8CC210A41D200C6E092 /* Resources */ = {
+		AF0DD8D7210A41D200C6E092 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0DD8D7210A41D200C6E092 /* Resources */ = {
+		AFABC907210FAB750022366E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,6 +442,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07A7EB3DC6C6C706D219B7DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareemAssignmentAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		29E6A8EA745BAC2D41C72AF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +504,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		66BCD5B38F17E6FA0D4029E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8BDEC72C287071B5A0352A7C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,24 +542,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CareemAssignmentApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA60AEBA04C246E04F96C9D4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CareemAssignmentAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,14 +579,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0DD8CA210A41D200C6E092 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF0DD8D3210A41D200C6E092 /* CareemAssignmentAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF0DD8D5210A41D200C6E092 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,18 +587,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFABC905210FAB750022366E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFABC90C210FAB760022366E /* CareemAssignmentAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF0DD8D0210A41D200C6E092 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */;
-			targetProxy = AF0DD8CF210A41D200C6E092 /* PBXContainerItemProxy */;
-		};
 		AF0DD8DB210A41D200C6E092 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */;
 			targetProxy = AF0DD8DA210A41D200C6E092 /* PBXContainerItemProxy */;
+		};
+		AFABC90F210FAB760022366E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0DD8B6210A41CF00C6E092 /* CareemAssignmentApp */;
+			targetProxy = AFABC90E210FAB760022366E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -745,50 +784,6 @@
 			};
 			name = Release;
 		};
-		AF0DD8E6210A41D200C6E092 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH2642V3WY;
-				INFOPLIST_FILE = CareemAssignmentAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareemAssignmentApp.app/CareemAssignmentApp";
-			};
-			name = Debug;
-		};
-		AF0DD8E7210A41D200C6E092 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47B20FF1DDB75FC54A086242 /* Pods-CareemAssignmentAppTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH2642V3WY;
-				INFOPLIST_FILE = CareemAssignmentAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareemAssignmentApp.app/CareemAssignmentApp";
-			};
-			name = Release;
-		};
 		AF0DD8E9210A41D200C6E092 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 800E17ACD25D6B2E7D28D9FB /* Pods-CareemAssignmentAppUITests.debug.xcconfig */;
@@ -831,6 +826,48 @@
 			};
 			name = Release;
 		};
+		AFABC911210FAB760022366E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareemAssignmentApp.app/CareemAssignmentApp";
+			};
+			name = Debug;
+		};
+		AFABC912210FAB760022366E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B20FF1DDB75FC54A086242 /* Pods-CareemAssignmentAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH2642V3WY;
+				INFOPLIST_FILE = CareemAssignmentAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swifttech.CareemAssignmentAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareemAssignmentApp.app/CareemAssignmentApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -852,20 +889,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF0DD8E5210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF0DD8E6210A41D200C6E092 /* Debug */,
-				AF0DD8E7210A41D200C6E092 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		AF0DD8E8210A41D200C6E092 /* Build configuration list for PBXNativeTarget "CareemAssignmentAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF0DD8E9210A41D200C6E092 /* Debug */,
 				AF0DD8EA210A41D200C6E092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFABC910210FAB760022366E /* Build configuration list for PBXNativeTarget "CareemAssignmentAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFABC911210FAB760022366E /* Debug */,
+				AFABC912210FAB760022366E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

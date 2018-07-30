@@ -17,7 +17,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
     @IBOutlet weak var tableView: UITableView!
 
     private let disposeBag = DisposeBag()
-    fileprivate var searchVm = MovieSearchViewModel()
+    var searchVm = MovieSearchViewModel()
 
     fileprivate lazy var autoSuggestVc: AutoSuggestionViewController =  {
         let vc = AutoSuggestionViewController.initFromStoryboard(name: "AutoSuggestion")
@@ -25,7 +25,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         return vc
     }()
 
-    fileprivate lazy var searchController: UISearchController = {
+    lazy var searchController: UISearchController = {
        let controller =  UISearchController(searchResultsController: self.autoSuggestVc)
         return controller
     } ()
@@ -90,7 +90,6 @@ private extension MovieSearchViewController {
         searchController.searchBar.placeholder = Constants.searchBarPlaceHolder
         searchController.searchBar.tintColor = UIColor.darkGray
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.delegate = self
 
         searchController.searchBar.rx.searchButtonClicked.subscribe(onNext: {
             // Perform Search
@@ -153,20 +152,10 @@ private extension MovieSearchViewController {
     }
 }
 
-extension MovieSearchViewController: UISearchControllerDelegate {
-
-    func willPresentSearchController(_ searchController: UISearchController) {
-        //searchController.view.isHidden = false
-    }
-
-}
-
 extension MovieSearchViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
-
         searchController.searchResultsController?.view.isHidden = false
-
     }
 }
 
@@ -175,7 +164,6 @@ extension MovieSearchViewController: UISearchResultsUpdating {
 extension MovieSearchViewController: AutoSuggestionDelegate {
 
     func didTapSuggestion(suggestion: String?) {
-
         guard let sugg = suggestion else { return }
         searchController.searchBar.text = sugg
         searchVm.searchText.value = sugg

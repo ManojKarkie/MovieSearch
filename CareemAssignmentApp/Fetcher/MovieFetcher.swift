@@ -10,12 +10,14 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
+protocol ApiFetcher { }
+
 // MARK:- Success and failure closure typealias
 
 typealias MovieSearchSuccessHandler = (MovieSearchResult) -> Void
 typealias MovieSearchFailureHandler =  (String) -> Void
 
-struct MovieFetcher {
+struct MovieFetcher: ApiFetcher {
 
     static func fetchMovies(searchParams: [String: Any], success: @escaping MovieSearchSuccessHandler, failure: @escaping MovieSearchFailureHandler) {
 

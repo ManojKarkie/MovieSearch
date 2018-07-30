@@ -43,6 +43,7 @@ class MovieSearchViewModel {
     }
 
     var searchParams: [String: Any] {
+
         return ["query": searchText.value,
                 "page": pageNumber,
                 "api_key": MovieApi.Api_Key]
@@ -122,7 +123,6 @@ extension MovieSearchViewModel {
 extension MovieSearchViewModel {
 
     func saveSearch(searchResult: MovieSearchResult) {
-
         if !self.searchText.value.isEmpty && !searchResult.movies.isEmpty  {
             RecentSearch.saveRecent(text: self.searchText.value)
         }
