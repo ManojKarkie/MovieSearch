@@ -16,7 +16,10 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
 
+    // MARK:- RxSwift Dispose Bag
     private let disposeBag = DisposeBag()
+
+    // MARK:- View Model
     var searchVm = MovieSearchViewModel()
 
     fileprivate lazy var autoSuggestVc: AutoSuggestionViewController =  {
@@ -39,6 +42,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         return MovieListTableViewDataSource(vm: searchVm)
     }()
 
+    // MARK:- Constants
     private struct Constants {
         static let searchBarPlaceHolder = "Enter movie name"
         static let errorAlertTitle = "Error!"
@@ -49,6 +53,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         static let emptyDescription = "No movies found for your search"
     }
 
+    // MARK:- Empty State View
     fileprivate lazy var emptyResultView: EmptyResultControl = {
         let emptyView = EmptyResultControl()
         let emptyVm = EmptyResultViewModel.init(emptyImageName: Constants.emptyResultLogo, emptyTitle: Constants.emptyTitle, emptyDesc: Constants.emptyDescription)
@@ -63,7 +68,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         // Do any additional setup after loading the view.
         setupTableView()
         setupSearchBar()
-        bindRx()
+        bindVm()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +83,7 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
 
 }
 
-//MARK:- UI Setup
+//MARK:- UI Setup and Management
 
 private extension MovieSearchViewController {
 
@@ -118,9 +123,11 @@ private extension MovieSearchViewController {
 
 }
 
+// MARK:- View Model Binding
+
 private extension MovieSearchViewController {
 
-    func bindRx() {
+    func bindVm() {
         searchController.searchBar.rx.text.orEmpty.bind(to: searchVm.searchText).disposed(by: disposeBag)
 
         searchVm.isLoadingDriver.drive(onNext: { isLoading in
@@ -138,6 +145,13 @@ private extension MovieSearchViewController {
         }).disposed(by: disposeBag)
     }
 
+
+}
+
+// MARK:- Reload And Search
+
+private extension MovieSearchViewController {
+
     func reloadAndSearch() {
 
         self.searchController.searchResultsController?.dismiss(animated: false, completion: nil)
@@ -150,7 +164,10 @@ private extension MovieSearchViewController {
         }
         self.searchVm.searchMovies()
     }
+
 }
+
+// MARK:- UISearchResultsUpdating Delegate
 
 extension MovieSearchViewController: UISearchResultsUpdating {
 

@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK:- Movie List Table View Delegate
+
 class MovieListTableViewDelegate: NSObject, UITableViewDelegate {
 
     weak var searchVm: MovieSearchViewModel!
@@ -17,6 +19,8 @@ class MovieListTableViewDelegate: NSObject, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        // MARK:- Evaluate and trigger next page
 
         if searchVm.isLastRow(row: indexPath.row) && searchVm.shouldLoadMore {
             let spinner = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
@@ -30,6 +34,8 @@ class MovieListTableViewDelegate: NSObject, UITableViewDelegate {
     }
 
 }
+
+// MARK:- Movie List Table View Data Source
 
 class MovieListTableViewDataSource: NSObject, UITableViewDataSource {
 

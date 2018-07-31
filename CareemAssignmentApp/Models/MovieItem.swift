@@ -8,6 +8,8 @@
 
 import ObjectMapper
 
+// MARK:- Movie Model
+
 struct MovieItem: Mappable {
 
     var posterUrl: String?

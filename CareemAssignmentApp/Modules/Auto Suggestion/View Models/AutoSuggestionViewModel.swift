@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: Auto Suggestion View Model
+
 struct AutoSuggestionViewModel {
 
     fileprivate var topSuggestions:[RecentSearch] = []

@@ -8,6 +8,8 @@
 
 import ObjectMapper
 
+// MARK:- Movie Search Result Model
+
 struct MovieSearchResult: Mappable {
 
     var pageNumber: Int?

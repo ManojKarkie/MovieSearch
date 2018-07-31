@@ -31,6 +31,8 @@ final class AppCoordinator: Coordinator {
         self.window = window
     }
 
+    // MARK:- Start the flow of the app
+
     func start() {
         let movieSearchVc = MovieSearchViewController.initFromStoryboard(name: "MovieSearch")
         let nav = UINavigationController.init(rootViewController: movieSearchVc)

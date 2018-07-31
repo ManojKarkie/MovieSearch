@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK:- UIView Controller Extensions, Initialization from storyboard and alert handlers
+
 protocol StoryboardInitializable {
     static var storyboardIdentifier: String { get }
 }

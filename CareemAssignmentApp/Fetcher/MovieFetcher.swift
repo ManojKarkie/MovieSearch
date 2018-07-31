@@ -12,12 +12,16 @@ import ObjectMapper
 
 protocol ApiFetcher { }
 
-// MARK:- Success and failure closure typealias
-
-typealias MovieSearchSuccessHandler = (MovieSearchResult) -> Void
-typealias MovieSearchFailureHandler =  (String) -> Void
+struct FetcherConstants {
+    static let somethingWentWrong = "Something went wrong, Please try again later."
+}
 
 struct MovieFetcher: ApiFetcher {
+
+    // MARK:- Success and failure closures
+
+    typealias MovieSearchSuccessHandler = (_ result: MovieSearchResult) -> Void
+    typealias MovieSearchFailureHandler =  (_ error: String) -> Void
 
     static func fetchMovies(searchParams: [String: Any], success: @escaping MovieSearchSuccessHandler, failure: @escaping MovieSearchFailureHandler) {
 
@@ -27,13 +31,12 @@ struct MovieFetcher: ApiFetcher {
 
             case let .success(value):
                 let resultDict = value as?  [String: Any] ?? [:]
-                print("movies result \(resultDict)")
+                //print("movies result \(resultDict)")
                 if let result  = MovieSearchResult(JSON: resultDict) {
                     success(result)
-                    //print("Final result \(result)")
                     return
                 }
-                failure("Something went wrong, Please try again later.")
+                failure(FetcherConstants.somethingWentWrong)
                 break
             case let .failure(error):
                 failure(error.localizedDescription)

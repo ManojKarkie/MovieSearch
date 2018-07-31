@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK:- Api Resource
+
 struct MovieApi {
 
     static let Api_Key = "2696829a81b1b5827d515ff121700838"

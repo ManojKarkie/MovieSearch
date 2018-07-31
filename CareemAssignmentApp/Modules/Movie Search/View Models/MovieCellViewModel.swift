@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK:- Movie cell View Model
+
 struct MovieCellViewModel {
 
     private let movie: MovieItem

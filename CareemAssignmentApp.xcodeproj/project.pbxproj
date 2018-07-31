@@ -38,6 +38,7 @@
 		AFABC902210E295F0022366E /* AutoSuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */; };
 		AFABC904210E2B450022366E /* AutoSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */; };
 		AFABC90C210FAB760022366E /* CareemAssignmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC90B210FAB760022366E /* CareemAssignmentAppTests.swift */; };
+		AFABC916211031F00022366E /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC915211031F00022366E /* AppTheme.swift */; };
 		D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		AFABC909210FAB750022366E /* CareemAssignmentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFABC90B210FAB760022366E /* CareemAssignmentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentAppTests.swift; sourceTree = "<group>"; };
 		AFABC90D210FAB760022366E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFABC915211031F00022366E /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,20 +186,20 @@
 		AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
-				AF71614F210CE4280026247B /* Empty State */,
-				AF71614C210CDA9F0026247B /* App Coordinator */,
-				AF0DD8FE210C431100C6E092 /* Movie Search View Model */,
-				AF0DD8F9210A576A00C6E092 /* Models */,
-				AF0DD8F6210A574500C6E092 /* Fetcher */,
-				AF0DD8F3210A54D800C6E092 /* API */,
-				AF0DD8EE210A4C3C00C6E092 /* Extensions */,
-				AF0DD8EB210A4BE600C6E092 /* Views */,
-				AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */,
+				AFABC91321102E8E0022366E /* App Delegate */,
 				AF0DD8BE210A41CF00C6E092 /* Main.storyboard */,
 				AF0DD8C4210A41D200C6E092 /* Assets.xcassets */,
 				AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */,
 				AF0DD8C9210A41D200C6E092 /* Info.plist */,
 				AF0DD8C1210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld */,
+				AFABC914211031790022366E /* Theme */,
+				AF71614F210CE4280026247B /* Empty State */,
+				AF71614C210CDA9F0026247B /* App Coordinator */,
+				AF0DD8EE210A4C3C00C6E092 /* Extensions */,
+				AF0DD8F3210A54D800C6E092 /* Api Resource */,
+				AF0DD8F6210A574500C6E092 /* Fetcher */,
+				AF0DD8F9210A576A00C6E092 /* Models */,
+				AF0DD8EB210A4BE600C6E092 /* Modules */,
 			);
 			path = CareemAssignmentApp;
 			sourceTree = "<group>";
@@ -220,18 +222,13 @@
 			path = CareemAssignmentAppUITests;
 			sourceTree = "<group>";
 		};
-		AF0DD8EB210A4BE600C6E092 /* Views */ = {
+		AF0DD8EB210A4BE600C6E092 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				AF0DD8EC210A4C0000C6E092 /* MovieSearch.storyboard */,
-				AFABC8EB210D365B0022366E /* AutoSuggestion.storyboard */,
-				AF0DD903210C72D100C6E092 /* MovieTableViewCell.swift */,
-				AF0DD8F1210A4CC900C6E092 /* MovieSearchViewController.swift */,
-				AF0DD901210C6EA000C6E092 /* MovieListTableViewHelper.swift */,
-				AFABC8EF210DAF390022366E /* AutoSuggestionViewController.swift */,
-				AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */,
+				AFABC9172110352D0022366E /* Movie Search */,
+				AFABC919211035680022366E /* Auto Suggestion */,
 			);
-			path = Views;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		AF0DD8EE210A4C3C00C6E092 /* Extensions */ = {
@@ -244,12 +241,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AF0DD8F3210A54D800C6E092 /* API */ = {
+		AF0DD8F3210A54D800C6E092 /* Api Resource */ = {
 			isa = PBXGroup;
 			children = (
 				AF0DD8F4210A553900C6E092 /* MovieApi.swift */,
 			);
-			path = API;
+			path = "Api Resource";
 			sourceTree = "<group>";
 		};
 		AF0DD8F6210A574500C6E092 /* Fetcher */ = {
@@ -269,16 +266,6 @@
 				AF0DD8FC210A585700C6E092 /* MovieSearchResult.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		AF0DD8FE210C431100C6E092 /* Movie Search View Model */ = {
-			isa = PBXGroup;
-			children = (
-				AF0DD8FF210C432F00C6E092 /* MovieSearchViewModel.swift */,
-				AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */,
-				AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */,
-			);
-			path = "Movie Search View Model";
 			sourceTree = "<group>";
 		};
 		AF71614C210CDA9F0026247B /* App Coordinator */ = {
@@ -305,6 +292,62 @@
 				AFABC90D210FAB760022366E /* Info.plist */,
 			);
 			path = CareemAssignmentAppTests;
+			sourceTree = "<group>";
+		};
+		AFABC91321102E8E0022366E /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8BA210A41CF00C6E092 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		AFABC914211031790022366E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				AFABC915211031F00022366E /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		AFABC9172110352D0022366E /* Movie Search */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8EC210A4C0000C6E092 /* MovieSearch.storyboard */,
+				AF0DD903210C72D100C6E092 /* MovieTableViewCell.swift */,
+				AF0DD8F1210A4CC900C6E092 /* MovieSearchViewController.swift */,
+				AF0DD901210C6EA000C6E092 /* MovieListTableViewHelper.swift */,
+				AFABC9182110354C0022366E /* View Models */,
+			);
+			path = "Movie Search";
+			sourceTree = "<group>";
+		};
+		AFABC9182110354C0022366E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8FF210C432F00C6E092 /* MovieSearchViewModel.swift */,
+				AF0DD905210C73AD00C6E092 /* MovieCellViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		AFABC919211035680022366E /* Auto Suggestion */ = {
+			isa = PBXGroup;
+			children = (
+				AFABC8EB210D365B0022366E /* AutoSuggestion.storyboard */,
+				AFABC8EF210DAF390022366E /* AutoSuggestionViewController.swift */,
+				AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */,
+				AFABC91A211035950022366E /* View Models */,
+			);
+			path = "Auto Suggestion";
+			sourceTree = "<group>";
+		};
+		AFABC91A211035950022366E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFABC904210E2B450022366E /* AutoSuggestionTableViewCell.swift in Sources */,
+				AFABC916211031F00022366E /* AppTheme.swift in Sources */,
 				AF0DD8F0210A4C5A00C6E092 /* UIViewController+Extensions.swift in Sources */,
 				AFABC902210E295F0022366E /* AutoSuggestionViewModel.swift in Sources */,
 				AF0DD8FB210A578700C6E092 /* MovieItem.swift in Sources */,

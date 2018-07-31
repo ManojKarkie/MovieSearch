@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK:- Empty State View Model
+
 struct EmptyResultViewModel {
 
     let emptyImageName: String
@@ -18,9 +20,13 @@ struct EmptyResultViewModel {
 
 class EmptyResultControl: UIView {
 
+    // MARK:- IBOutlets
+
     @IBOutlet weak var emptyImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+
+    // MARK:- Initialization
 
     init() {
         super.init(frame: UIScreen.main.bounds)
@@ -31,6 +37,8 @@ class EmptyResultControl: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK:- Populate UI with view model
+
     func setup(vm: EmptyResultViewModel) {
         self.emptyImageView.image  = UIImage.init(named: vm.emptyImageName)
         self.titleLabel.text = vm.emptyTitle
@@ -39,6 +47,8 @@ class EmptyResultControl: UIView {
 }
 
 private extension EmptyResultControl {
+
+    // MARK:- Load empty result view from EmptyResultView.swift nib file
 
     func loadFromNib() {
         let bundle = Bundle(for: type(of: self))

@@ -13,8 +13,8 @@ import RxCocoa
 class MovieSearchViewModel {
 
     var isLoading = Variable<Bool>(false)
-    fileprivate var success = Variable<Bool>(false)
-    fileprivate var error = Variable<String?>(nil)
+    var success = Variable<Bool>(false)
+    var error = Variable<String?>(nil)
 
     // Observables/Drivers
 
@@ -49,6 +49,7 @@ class MovieSearchViewModel {
                 "api_key": MovieApi.Api_Key]
     }
 
+    // MARK:- Call Search Movie Api
     func searchMovies() {
 
         self.isLoading.value = true
