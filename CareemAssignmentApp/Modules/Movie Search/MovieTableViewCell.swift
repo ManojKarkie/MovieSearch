@@ -30,7 +30,7 @@ class MovieTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        posterImageView.layer.cornerRadius = Constants.posterImageCornerRadius
+        posterImageView.set(cornerRadius: Constants.posterImageCornerRadius)
     }
 
     // MARK:- Setup with cell view model

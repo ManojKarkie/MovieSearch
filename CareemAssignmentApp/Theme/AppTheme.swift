@@ -12,6 +12,10 @@ import UIKit
 
 enum AppColor {
     case baseColor
+    case searchBarTintColor
+    case listSeparatorColor
+    case recentSearchTextColor
+    case recentSearchBackgroundColor
 }
 
 extension AppColor {
@@ -20,6 +24,15 @@ extension AppColor {
         switch self {
           case .baseColor:
             return UIColor(red: 0, green: 144.0/255.0, blue: 81.0/255.0, alpha: 1.0)
+          case .searchBarTintColor:
+            return UIColor(white: 0.9, alpha: 0.9)
+          case .listSeparatorColor:
+            return UIColor.init(hex: "#EBEBF1")
+         case .recentSearchTextColor:
+            return UIColor.init(hex: "#424242")
+        case .recentSearchBackgroundColor:
+            return UIColor.init(hex: "#F7F7F6")
+
         }
     }
 }

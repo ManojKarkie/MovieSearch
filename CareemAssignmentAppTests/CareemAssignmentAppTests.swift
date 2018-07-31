@@ -17,63 +17,88 @@ class MockSearchViewModel: MovieSearchViewModel {
     var isSearchMovieCalled = false
 
     override func searchMovies() {
+        super.searchMovies()
         isSearchMovieCalled = true
-    }
-
-    override var searchParams: [String : Any] {
-        return  ["query": "Batman",
-                 "page": 1,
-                 "api_key": MovieApi.Api_Key]
-    }
-
-    var shouldLoadSecondPage: Bool {
-        return movies.count < totalResults
     }
 
 }
 
 class CareemAssignmentAppTests: XCTestCase {
 
-    // Mock Sut
-    var sutMock : MockSearchViewModel!
-    //var sut : MovieSearchViewModel!
+    // System Under Test
+    var sut : MockSearchViewModel!
 
     var controller : MovieSearchViewController!
-
-    // View Model test
-
-    var searchViewModel: MovieSearchViewModel!
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        controller = MovieSearchViewController.initFromStoryboard(name: "MovieSearch")
-        sutMock = MockSearchViewModel()
-        //sut = MovieSearchViewModel()
 
-        controller.searchVm = sutMock
+        controller = MovieSearchViewController.initFromStoryboard(name: "MovieSearch")
+        sut = MockSearchViewModel()
+        controller.searchVm = sut
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-        sutMock = nil
-        // sut = nil
-        controller = nil
+        sut = nil
+        controller =  nil
     }
+
+    // Test whether search movie is called
 
     func testIfSearchMovieCalled() {
 
         // When
 
-        sutMock.searchMovies()
+        sut.searchMovies()
 
         // Then
 
-        XCTAssertTrue(sutMock.isSearchMovieCalled)
+        XCTAssertTrue(sut.isSearchMovieCalled)
     }
 
+    // Test whether movie search succeeds for valid search text
+
+    func testForSearchMovieSuccess() {
+
+        // Given
+        sut.searchText.value = "Batman"
+
+        let successExpection = expectation(description: "Success Closure called")
+
+        // When
+
+        MovieFetcher.fetchMovies(searchParams: sut.searchParams, success: {  result in
+
+            self.sut.searchResult = result
+
+            (self.sut.searchResult?.movies ?? []).forEach {
+                self.sut.movies.append($0)
+            }
+
+            self.sut.managePageNumber()
+            successExpection.fulfill()
+
+        }) { errorMessage in
+            XCTFail(errorMessage)
+        }
+
+        wait(for: [successExpection], timeout: 4)
+
+        // Then
+
+        XCTAssertTrue(!sut.movies.isEmpty)
+    }
+
+    // Test Whether pagination is working for search text with multiple pages of result
+
     func testForPagination() {
+
+        // Given
+
+        sut.searchText.value = "Batman"
 
         // Expectation
 
@@ -81,18 +106,15 @@ class CareemAssignmentAppTests: XCTestCase {
 
         // When
 
-        sutMock.searchText.value = "Batman"
+        MovieFetcher.fetchMovies(searchParams: sut.searchParams, success: {  result in
 
-        MovieFetcher.fetchMovies(searchParams: sutMock.searchParams, success: {  result in
+            self.sut.searchResult = result
 
-            self.sutMock.searchResult = result
-
-            (self.sutMock.searchResult?.movies ?? []).forEach {
-                self.sutMock.movies.append($0)
+            (self.sut.searchResult?.movies ?? []).forEach {
+                self.sut.movies.append($0)
             }
 
-            self.sutMock.saveSearch(searchResult: result)
-            self.sutMock.managePageNumber()
+            self.sut.managePageNumber()
             successExpection.fulfill()
 
         }) { errorMessage in
@@ -103,20 +125,21 @@ class CareemAssignmentAppTests: XCTestCase {
 
         // Then
 
-        XCTAssertTrue(sutMock.shouldLoadSecondPage)
+        XCTAssertTrue(sut.shouldLoadMore)
 
     }
+
+    // Test whether loading flag is set to true when search movie api called from view model
 
     func testSearchButtonPressAndIndicator() {
 
         // When
 
-        //sutMock.searchMovies()
+        sut.searchMovies()
 
         // Then
 
-        // XCTAssertTrue(controller.indicator.isHidden == false)
+         XCTAssertTrue(sut.isLoading.value == true)
 
     }
-
 }

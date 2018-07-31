@@ -12,6 +12,10 @@ import UIKit
 
 class MovieListTableViewDelegate: NSObject, UITableViewDelegate {
 
+    private struct Constants {
+        static let spinnerHeight: CGFloat = 44.0
+    }
+
     weak var searchVm: MovieSearchViewModel!
 
     init(vm: MovieSearchViewModel) {
@@ -24,8 +28,8 @@ class MovieListTableViewDelegate: NSObject, UITableViewDelegate {
 
         if searchVm.isLastRow(row: indexPath.row) && searchVm.shouldLoadMore {
             let spinner = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
-            spinner.color = UIColor(red: 0, green: 144.0/255.0, blue: 81.0/255.0, alpha: 1.0)
-            spinner.frame = CGRect.init(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 44.0)
+            spinner.color = AppColor.baseColor.value
+            spinner.frame = CGRect.init(x: 0.0, y: 0.0, width: tableView.bounds.width, height: Constants.spinnerHeight)
             spinner.startAnimating()
             tableView.tableFooterView = spinner
             searchVm.searchMovies()

@@ -114,7 +114,8 @@ extension MovieSearchViewModel {
     }
 
     var shouldLoadMore: Bool {
-        return movies.count < totalResults && !self.searchText.value.isEmpty
+        //return movies.count < totalResults && !self.searchText.value.isEmpty
+        return movies.count < totalResults
     }
 
 }

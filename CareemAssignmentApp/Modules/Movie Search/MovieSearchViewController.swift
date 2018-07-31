@@ -47,7 +47,6 @@ class MovieSearchViewController: UIViewController, StoryboardInitializable {
         static let searchBarPlaceHolder = "Enter movie name"
         static let errorAlertTitle = "Error!"
         static let tableViewEstimatedHeight: CGFloat = 200.0
-        static let searchBarTintColor =  UIColor(red: 0, green: 144.0/255.0, blue: 81.0/255.0, alpha: 1.0)
         static let emptyResultLogo = "noResult"
         static let emptyTitle = "No movies found"
         static let emptyDescription = "No movies found for your search"
@@ -91,7 +90,7 @@ private extension MovieSearchViewController {
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
-        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
+        searchController.searchBar.barTintColor = AppColor.searchBarTintColor.value
         searchController.searchBar.placeholder = Constants.searchBarPlaceHolder
         searchController.searchBar.tintColor = UIColor.darkGray
         searchController.hidesNavigationBarDuringPresentation = false

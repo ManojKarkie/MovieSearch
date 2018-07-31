@@ -39,6 +39,8 @@
 		AFABC904210E2B450022366E /* AutoSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC903210E2B450022366E /* AutoSuggestionTableViewCell.swift */; };
 		AFABC90C210FAB760022366E /* CareemAssignmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC90B210FAB760022366E /* CareemAssignmentAppTests.swift */; };
 		AFABC916211031F00022366E /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABC915211031F00022366E /* AppTheme.swift */; };
+		AFC57539211053F400A83B75 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC57538211053F400A83B75 /* AppUtility.swift */; };
+		AFC5753B2110564800A83B75 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC5753A2110564800A83B75 /* UIView+Extensions.swift */; };
 		D2AB8354A0631A7C02F8998D /* Pods_CareemAssignmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59520D22B09B3510C07F6721 /* Pods_CareemAssignmentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,8 @@
 		AFABC90B210FAB760022366E /* CareemAssignmentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentAppTests.swift; sourceTree = "<group>"; };
 		AFABC90D210FAB760022366E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFABC915211031F00022366E /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		AFC57538211053F400A83B75 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		AFC5753A2110564800A83B75 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B1EAA8E9F134ED6C0E02F555 /* Pods-CareemAssignmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D96E9E937BC9B31398954A2B /* Pods-CareemAssignmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentApp/Pods-CareemAssignmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		E36E6FAFF0077314A857CBC1 /* Pods-CareemAssignmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareemAssignmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareemAssignmentAppTests/Pods-CareemAssignmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,12 +190,13 @@
 		AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
-				AFABC91321102E8E0022366E /* App Delegate */,
-				AF0DD8BE210A41CF00C6E092 /* Main.storyboard */,
-				AF0DD8C4210A41D200C6E092 /* Assets.xcassets */,
 				AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */,
 				AF0DD8C9210A41D200C6E092 /* Info.plist */,
-				AF0DD8C1210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld */,
+				AF0DD8BE210A41CF00C6E092 /* Main.storyboard */,
+				AFC57535211052BC00A83B75 /* Assets */,
+				AFABC91321102E8E0022366E /* App Delegate */,
+				AFC57537211053D100A83B75 /* AppUitility */,
+				AFC57536211052FA00A83B75 /* Model Editor */,
 				AFABC914211031790022366E /* Theme */,
 				AF71614F210CE4280026247B /* Empty State */,
 				AF71614C210CDA9F0026247B /* App Coordinator */,
@@ -237,6 +242,7 @@
 				AF0DD8EF210A4C5A00C6E092 /* UIViewController+Extensions.swift */,
 				AFABC8F1210DBBBA0022366E /* UIColor+Extensions.swift */,
 				AFABC8F3210DBC080022366E /* String+Extensions.swift */,
+				AFC5753A2110564800A83B75 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +354,30 @@
 				AFABC901210E295F0022366E /* AutoSuggestionViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		AFC57535211052BC00A83B75 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8C4210A41D200C6E092 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AFC57536211052FA00A83B75 /* Model Editor */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8C1210A41CF00C6E092 /* CareemAssignmentApp.xcdatamodeld */,
+			);
+			path = "Model Editor";
+			sourceTree = "<group>";
+		};
+		AFC57537211053D100A83B75 /* AppUitility */ = {
+			isa = PBXGroup;
+			children = (
+				AFC57538211053F400A83B75 /* AppUtility.swift */,
+			);
+			path = AppUitility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -604,6 +634,8 @@
 				AFABC902210E295F0022366E /* AutoSuggestionViewModel.swift in Sources */,
 				AF0DD8FB210A578700C6E092 /* MovieItem.swift in Sources */,
 				AF71614E210CDAB30026247B /* AppCoordinator.swift in Sources */,
+				AFC5753B2110564800A83B75 /* UIView+Extensions.swift in Sources */,
+				AFC57539211053F400A83B75 /* AppUtility.swift in Sources */,
 				AF0DD8F5210A553900C6E092 /* MovieApi.swift in Sources */,
 				AFABC8FF210E0DF20022366E /* RecentSearch+CoreDataClass.swift in Sources */,
 				AF0DD8F8210A575400C6E092 /* MovieFetcher.swift in Sources */,
