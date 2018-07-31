@@ -31,7 +31,6 @@ class AutoSuggestionViewController: UITableViewController, StoryboardInitializab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.view.backgroundColor = AppColor.recentSearchBackgroundColor.value
     }
 
