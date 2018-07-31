@@ -190,15 +190,14 @@
 		AF0DD8B9210A41CF00C6E092 /* CareemAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
-				AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */,
+				AFC5753D21108BB900A83B75 /* Support Files */,
 				AF0DD8C9210A41D200C6E092 /* Info.plist */,
-				AF0DD8BE210A41CF00C6E092 /* Main.storyboard */,
 				AFC57535211052BC00A83B75 /* Assets */,
 				AFABC91321102E8E0022366E /* App Delegate */,
 				AFC57537211053D100A83B75 /* AppUitility */,
 				AFC57536211052FA00A83B75 /* Model Editor */,
 				AFABC914211031790022366E /* Theme */,
-				AF71614F210CE4280026247B /* Empty State */,
+				AF71614F210CE4280026247B /* Empty State View */,
 				AF71614C210CDA9F0026247B /* App Coordinator */,
 				AF0DD8EE210A4C3C00C6E092 /* Extensions */,
 				AF0DD8F3210A54D800C6E092 /* Api Resource */,
@@ -282,13 +281,13 @@
 			path = "App Coordinator";
 			sourceTree = "<group>";
 		};
-		AF71614F210CE4280026247B /* Empty State */ = {
+		AF71614F210CE4280026247B /* Empty State View */ = {
 			isa = PBXGroup;
 			children = (
 				AF716150210CE4460026247B /* EmptyResultView.xib */,
 				AF716152210CE4830026247B /* EmptyResultControl.swift */,
 			);
-			path = "Empty State";
+			path = "Empty State View";
 			sourceTree = "<group>";
 		};
 		AFABC90A210FAB760022366E /* CareemAssignmentAppTests */ = {
@@ -378,6 +377,15 @@
 				AFC57538211053F400A83B75 /* AppUtility.swift */,
 			);
 			path = AppUitility;
+			sourceTree = "<group>";
+		};
+		AFC5753D21108BB900A83B75 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DD8C6210A41D200C6E092 /* LaunchScreen.storyboard */,
+				AF0DD8BE210A41CF00C6E092 /* Main.storyboard */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

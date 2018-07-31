@@ -24,6 +24,7 @@ class AutoSuggestionViewController: UITableViewController, StoryboardInitializab
     private struct Constants {
         static let sectionHeaderHeight: CGFloat = 50.0
         static let headerTitleText = "RECENT SEARCHES"
+        static let autoSuggestionTvCellIdentifier =  "AutoSuggestionTableViewCell"
     }
 
     // MARKK:-  ViewController Lifecycle
@@ -60,7 +61,7 @@ extension AutoSuggestionViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AutoSuggestionTableViewCell", for: indexPath) as! AutoSuggestionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.autoSuggestionTvCellIdentifier, for: indexPath) as! AutoSuggestionTableViewCell
         cell.setup(searchText: autoSuggestionVm.searchTextFor(row: indexPath.row))
         return cell
     }

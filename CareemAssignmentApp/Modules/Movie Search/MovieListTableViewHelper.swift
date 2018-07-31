@@ -43,6 +43,10 @@ class MovieListTableViewDelegate: NSObject, UITableViewDelegate {
 
 class MovieListTableViewDataSource: NSObject, UITableViewDataSource {
 
+    private struct Constants {
+        static let movieTvCellIdentifier =  "MovieTableViewCell"
+    }
+
     weak var searchVm: MovieSearchViewModel!
 
     init(vm: MovieSearchViewModel) {
@@ -54,7 +58,7 @@ class MovieListTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let movieCell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell
+        let movieCell = tableView.dequeueReusableCell(withIdentifier: Constants.movieTvCellIdentifier, for: indexPath) as! MovieTableViewCell
         let cellViewModel = searchVm.cellVmFor(row: indexPath.row)!
         movieCell.setup(cellVm: cellViewModel)
         return movieCell
